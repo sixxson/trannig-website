@@ -151,3 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateCarousel);
   updateCarousel();
 });
+
+const btn = document.getElementById("scrollBtn");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 600) {
+    btn.classList.add("show");
+  } else {  
+    btn.classList.remove("show");
+  }
+});
