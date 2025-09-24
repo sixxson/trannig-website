@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header header-bg fixed top-0 z-50 w-full bg-[#801618]">
+      <div
+        class="container max-w-[1400px] mx-auto py-5 flex justify-between items-center w-full gap-20 px-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="/images//something.svg" class="lg:h-full h-[45px]" alt="" />
+        </div>
+        <!-- navBar -->
+        <!-- languageSwitcher -->
+        <nav class="flex-1 h-full hidden lg:block">
+          <ul class="text-nav text-white flex justify-between items-center">
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="/"><img src="/images/home.png" alt="" /></a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Về chúng tôi</a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Lĩnh vực hoạt động</a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Sản phẩm</a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Phát triển bền vững</a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Tin tức</a>
+            </li>
+            <li class="hover:border-b-2 border-white pb-5">
+              <a href="#">Liên hệ</a>
+            </li>
+            <div class="relative flex items-start gap-6 pb-5">
+              <div class="flex items-center gap-2 font-bold group">
+                <span>VN</span>
+                <img
+                  src="/images/caret-down.png"
+                  alt=""
+                  class="group-hover:translate-y-0.5 transition-transform"
+                />
+                <span
+                  class="absolute top-1/2 bg group-hover:translate-y-0.5 transition-transform bg-white p-1 rounded text-[#801618] hidden group-hover:block"
+                  >EN</span
+                >
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </div>
+          </ul>
+        </nav>
+        <nav class="lg:hidden flex items-center gap-5 text-white">
+          <div class="relative flex items-start gap-6">
+            <div class="relative flex items-center gap-2 font-bold group">
+              <span>VN</span>
+              <img
+                src="/images/caret-down.png"
+                alt=""
+                class="group-hover:translate-y-0.5 transition-transform"
+              />
+              <span
+                class="absolute top-4/5 bg group-hover:translate-y-0.5 transition-transform bg-white p-1 rounded text-[#801618] hidden group-hover:block"
+                >EN</span
+              >
+            </div>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search-icon lucide-search"
+            >
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+          </div>
+          <div class="bg-[#801618] p-2 rounded-md inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu"
+            >
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="relative">
+      <!-- content -->
+      <!-- hero section -->
+      <section
+        class="relative w-full overflow-x-hidden h-[615px] lg:h-[1015px]"
+      >
+        <div
+          id="default-carousel"
+          class="flex transform transition-transform duration-300 ease-in-out"
+        >
+          <!-- item 1 -->
+          <div
+            id="item1"
+            class="space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
+          >
+            <div
+              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+            >
+              <div
+                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+              >
+                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
+                <h1 class="text-3xl lg:text-[64px] leading-tight">
+                  Cam kết mang lại kết quả tối ưu
+                </h1>
+                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
+                  Tích hợp chiến lược nhà cung cấp toàn cầu với những hiểu biết
+                  địa phương, dịch vụ để đạt được kết quả tối ưu.
+                </p>
+                <button
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                >
+                  KHÁM PHÁ THÊM
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div
+            id="item2"
+            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-2.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
+          >
+            <div
+              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+            >
+              <div
+                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+              >
+                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
+                <h1 class="text-3xl lg:text-[64px] leading-tight">
+                  Mang đến giải pháp tùy chỉnh
+                </h1>
+                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
+                  Cung cấp các giải pháp tùy chỉnh để đạt được các mô hình tiết
+                  kiệm chi phí cho khách hàng
+                </p>
+                <button
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                >
+                  KHÁM PHÁ THÊM
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item 3 -->
+          <div
+            id="item3"
+            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-3.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
+          >
+            <div
+              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+            >
+              <div
+                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+              >
+                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
+                <h1 class="text-3xl lg:text-[64px] leading-tight">
+                  Tạo dựng môi trường làm việc hiệu quả
+                </h1>
+                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
+                  Xây dựng một môi trường làm việc chuyên nghiệp để thu hút nhân
+                  tài
+                </p>
+                <button
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                >
+                  KHÁM PHÁ THÊM
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item 4 -->
+          <div
+            id="item4"
+            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-4.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
+          >
+            <div
+              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+            >
+              <div
+                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+              >
+                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
+                <h1 class="text-3xl lg:text-[64px] leading-tight">
+                  Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
+                </h1>
+                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
+                  Đảm bảo tuân thủ đầy đủ các tiêu chuẩn Môi trường, Sức khỏe,
+                  An toàn, và Quy trình áp dụng để đóng góp cho một thế giới tốt
+                  đẹp hơn
+                </p>
+                <button
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                >
+                  KHÁM PHÁ THÊM
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider indicators -->
+        <div
+          id="slider-indicators"
+          class="hidden lg:grid grid-cols-4 gap-3 lg:gap-8 absolute bottom-0 z-1 left-1/2 -translate-x-1/2 container max-w-[1400px] mx-auto pb-20 px-3.5"
+        >
+          <p
+            class="inline text-lg leading-6 text-white border-b-4 py-5 border-[#BF0006]"
+          >
+            Cam kết mang lại kết quả tối ưu
+          </p>
+          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+            Mang đến giải pháp tùy chỉnh
+          </p>
+          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+            Tạo dựng môi trường làm việc hiệu quả
+          </p>
+          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+            Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
+          </p>
+        </div>
+        <!-- Slider controls -->
+        <button
+          id="prev-button"
+          class="absolute top-1/2 z-10 left-5 lg:left-20 -translate-y-1/2 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          id="next-button"
+          class="absolute top-1/2 z-10 right-5 lg:right-20 -translate-y-1/2 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="-rotate-45 lucide lucide-chevron-right-icon lucide-chevron-right"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+      </section>
+      <!-- section 2 -->
+      <section class="relative container grid grid-cols-2 -mt-14 gap-18">
+        <img
+          src="/images/image.png"
+          class="relative -z-10 h-full object-cover md:col-span-1 col-span-full"
+          alt=""
+        />
+        <div
+          class="flex flex-col lg:gap-10 mt-20 px-3.5 gap-6 lg:mt-14 justify-center lg:mb-0 mb-10 md:col-span-1 col-span-full"
+        >
+          <img src="/images/text.svg" class="w-full" alt="" />
+          <p
+            class="text-base lg:text-lg md:px-4 lg:px-0 leading-7 lg:leading-8"
+          >
+            Các cổ đông của Mercury Chemical là những nhà hóa học dày dặn kinh
+            nghiệm, tích lũy qua nhiều năm làm việc tại Việt Nam và các quốc gia
+            châu Á. Sự kết hợp giữa kiến thức chuyên môn từ các tập đoàn quốc tế
+            và hiểu biết sâu sắc về thị trường địa phương giúp doanh nghiệp đáp
+            ứng tốt các yêu cầu của các đối tác đa quốc gia.
+          </p>
+          <div class="flex gap-3 items-center">
+            <span class="text-base font-bold leading-5.5"> VỀ CHÚNG TÔI</span>
+            <button
+              class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- section 3 -->
+      <section
+        class="w-full px-5 bg-[url(/images/bg-section-3.png)] py-20 bg-cover"
+      >
+        <h1 class="text-5xl font-semibold leading-15.5 text-center mb-10">
+          Ứng dụng
+        </h1>
+        <div
+          class="flex overflow-x-auto gap-5 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:overflow-visible"
+        >
+          <!-- item -->
+          <div
+            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+          >
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-5.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                PIN LITHIUM
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-6.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                Ô TÔ
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div
+            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+          >
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-3.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                Ô TÔ
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-4.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                TẨY RỬA CÔNG NGHIỆP
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div
+            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+          >
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-1.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                CÁP ĐIỆN
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+            >
+              <img
+                src="/images/item-2.png"
+                alt=""
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+              />
+              <h1
+                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+              >
+                GĂNG TAY
+              </h1>
+              <div
+                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+              >
+                <p class="text-sm">
+                  A Green building achieves more with less. It consumes less
+                  energy and wastes fewer resources, embodying a greater
+                  responsibility towards the environment.
+                </p>
+                <button
+                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="-rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-10 w-full">
+          <div class="h-1 w-full bg-[#801618]"></div>
+        </div>
+        <div class="flex gap-3 items-center justify-center h-14">
+          <span class="text-base font-bold leading-5.5">XEM THÊM</span>
+          <button
+            class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- section 4 -->
+      <section class="lg:pt-[103px] lg:pb-[85px]">
+        <div class="con1">
+          <div class="title">Vị trí văn phòng</div>
+          <div class="hexagon-layout">
+            <img
+              src="/images/Group 18830.png"
+              alt="Văn phòng"
+              class="center-img"
+            />
+            <!-- Absolute layout cho desktop -->
+            <div class="items-absolute">
+              <div class="item item1 group">
+                <img
+                  src="/images/Polygon 14.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Tân Sơn Nhất"
+                />
+                <div class="item-text">
+                  <div class="distance">12km - 30 phút</div>
+                  <div class="desc">Sân bay Quốc tế Tân Sơn Nhất</div>
+                </div>
+              </div>
+              <div class="item item2 group">
+                <img
+                  src="/images/Polygon 15.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Cái Mép"
+                />
+                <div class="item-text">
+                  <div class="distance">50km - 45 phút</div>
+                  <div class="desc">Cảng biển Cái Mép</div>
+                </div>
+              </div>
+              <div class="item item3 group">
+                <img
+                  src="/images/Polygon 15.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Kinh doanh trung tâm"
+                />
+                <div class="item-text">
+                  <div class="distance">6km - 15 phút</div>
+                  <div class="desc">Quận kinh doanh trung tâm</div>
+                </div>
+              </div>
+              <div class="item item4 group">
+                <img
+                  src="/images/Polygon 15.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Văn phòng mới"
+                />
+                <div class="item-text">
+                  <div class="distance">1km - 5 phút</div>
+                  <div class="desc">Vị trí văn phòng mới</div>
+                </div>
+              </div>
+              <div class="item item5 group">
+                <img
+                  src="/images/Polygon 15.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Cát Lái"
+                />
+                <div class="item-text">
+                  <div class="distance">12km - 30 phút</div>
+                  <div class="desc">Cảng Quốc tế Cát Lái</div>
+                </div>
+              </div>
+              <div class="item item6 group">
+                <img
+                  src="/images/Polygon 15.png"
+                  class="transition-transform duration-300 group-hover:scale-105"
+                  alt="Long Thành"
+                />
+                <div class="item-text">
+                  <div class="distance">35km - 35 phút</div>
+                  <div class="desc">Sân bay Quốc tế Long Thành mới</div>
+                </div>
+              </div>
+            </div>
+            <!-- Grid layout cho mobile -->
+            <div class="items-mobile">
+              <div class="item">
+                <img src="/images/Polygon 14.png" alt="Tân Sơn Nhất" />
+                <div class="item-text">
+                  <div class="distance">12km - 30 phút</div>
+                  <div class="desc">Sân bay Quốc tế Tân Sơn Nhất</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/images/Polygon 15.png" alt="Cái Mép" />
+                <div class="item-text">
+                  <div class="distance">50km - 45 phút</div>
+                  <div class="desc">Cảng biển Cái Mép</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/images/Polygon 15.png" alt="Kinh doanh trung tâm" />
+                <div class="item-text">
+                  <div class="distance">6km - 15 phút</div>
+                  <div class="desc">Quận kinh doanh trung tâm</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/images/Polygon 15.png" alt="Văn phòng mới" />
+                <div class="item-text">
+                  <div class="distance">1km - 5 phút</div>
+                  <div class="desc">Vị trí văn phòng mới</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/images/Polygon 15.png" alt="Cát Lái" />
+                <div class="item-text">
+                  <div class="distance">12km - 30 phút</div>
+                  <div class="desc">Cảng Quốc tế Cát Lái</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="/images/Polygon 15.png" alt="Long Thành" />
+                <div class="item-text">
+                  <div class="distance">35km - 35 phút</div>
+                  <div class="desc">Sân bay Quốc tế Long Thành mới</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 5 -->
+      <section class="bg-[url(/images/Polygon 21.png)] px-4">
+        <div
+          class="pt-22 pb-28 mx-auto container lg:w-[1400px] lg:flex lg:flex-row flex flex-col-reverse justify-between items-center md:grid md:grid-cols-2 md:gap-10"
+        >
+          <div
+            class="md:col-span-1 flex flex-col lg:gap-10 md:gap-5 gap-3 lg:w-[572px]"
+          >
+            <h1
+              class="font-semibold lg:text-5xl md:text-3xl text-2xl leading-15"
+            >
+              Cơ sở vật chất
+              <br />
+              (Văn phòng, Kho hàng)
+            </h1>
+            <p class="lg:text-lg md:text-md text-sm leading-6">
+              Hệ thống văn phòng và kho bãi của Mercury được đặt tại các địa
+              điểm chiến lược, đảm bảo sự thuận lợi cho quá trình vận chuyển và
+              các hoạt động kinh doanh. Vị trí này không chỉ giúp tối ưu hóa quy
+              trình hậu cần mà còn mang lại lợi thế trong việc mở rộng mối quan
+              hệ kinh doanh, đảm bảo rằng khách hàng luôn nhận được sự hỗ trợ
+              kịp thời và hiệu quả. Sự đầu tư vào cơ sở vật chất hiện đại không
+              chỉ cải thiện năng suất hoạt động mà còn là cam kết về việc mang
+              lại chất lượng dịch vụ vượt trội cho khách hàng, góp phần thúc đẩy
+              sự phát triển của doanh nghiệp và đối tác trong một môi trường
+              kinh doanh ngày càng cạnh tranh.
+            </p>
+          </div>
+          <img
+            src="/images/Group 18831.png"
+            class="lg:w-[573px] md:col-span-1"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- section 6 -->
+      <section class="py-20 space-y-10">
+        <h1
+          class="lg:text-5xl md:text-3xl text-2xl font-semibold leading-15 text-center"
+        >
+          Tin tức nổi bật
+        </h1>
+        <div class="contanier relative">
+          <button
+            class="btn prev left-1/14 bg-black/40 rounded-lg p-2 rotate-45"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <div class="carousel max-w-[1400px] mx-auto">
+            <div class="carousel-track">
+              <div class="carousel-item flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <p>20.06.2024</p>
+                  </div>
+                  <h1 class="text-2xl font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+              <div class="carousel-item flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <div>20.06.2024</div>
+                  </div>
+                  <h1 class="text-2xl font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+              <div class="carousel-item flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <div>20.06.2024</div>
+                  </div>
+                  <h1 class="text-2xl font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+              <div class="carousel-item flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <div>20.06.2024</div>
+                  </div>
+                  <h1 class="text-2xl font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+              <div class="carousel-item flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <div>20.06.2024</div>
+                  </div>
+                  <h1 class="text-2xl font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn next right-1/12 bg-black/40 rounded-lg rotate-45 p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45 text-white"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex gap-3 items-center justify-center h-14">
+          <span class="text-base font-bold leading-5.5">XEM THÊM</span>
+          <button
+            class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- section 7 -->
+      <section
+        class="container mx-auto grid grid-cols-12 lg:gap-10 md:gap-5 gap-2 bg-[url(/images/bg-section.png)] bg-cover lg:px-25 py-38.5 md:px-10 lg:mb-20 md:mb-10 mb-5"
+      >
+        <div
+          class="flex flex-col lg:gap-10 md:gap-5 gap-2 lg:col-span-5 md:col-span-6 col-span-full"
+        >
+          <div class="flex flex-col gap-3 text-white">
+            <h1
+              class="lg:text-5xl md:text-4xl text-3xl font-bold lg:leading-15 md:leading-13 leading-11"
+            >
+              Hóa học cho một thế giới tốt đẹp hơn
+            </h1>
+            <p class="lg:text-lg md:text-base text-sm leading-6">
+              Công ty TNHH Hóa Chất Mercury, với sứ mệnh "Hóa học cho một thế
+              giới tốt đẹp hơn," không ngừng nỗ lực phát triển các giải pháp bền
+              vững và thân thiện với môi trường. Chúng tôi, cùng với các đối tác
+              toàn cầu, cam kết thực hiện các mục tiêu chính sau để thúc đẩy sự
+              phát triển bền vững
+            </p>
+          </div>
+          <div class="flex gap-3 items-center h-14 text-white">
+            <span class="text-base font-bold leading-5.5">XEM THÊM</span>
+            <button
+              class="border-2 border-white rounded-md rotate-45 p-2 hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer class="bg-[url(/images/Frame-100.png)] py-10">
+        <div
+          class="container max-w-[1400px] text-white mx-auto space-y-10 flex flex-col gap-15 px-4"
+        >
+          <div
+            class="flex justify-between items-center lg:gap-80 md:gap-20 gap-10"
+          >
+            <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold leading-9.5">
+              Cập nhật tin tức, sự kiện mới nhất từ Mercury Chemical!
+            </h1>
+            <div class="flex flex-col gap-3">
+              <p>
+                Vui lòng nhập email của bạn để nhận được những tin tức, sự kiện,
+                ưu đãi mới nhất từ Mercury Chemical.
+              </p>
+              <form action="" class="flex justify-between items-center gap-3">
+                <input
+                  type="email"
+                  placeholder="Nhập email"
+                  class="py-3 px-6 flex-1 rounded-lg bg-white text-black"
+                />
+                <button
+                  class="rounded-lg rotate-45 border-2 border-red p-1"
+                  type="submit"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="grid grid-cols-12 lg:gap-10 md:gap-5 gap-2">
+            <div class="col-span-3 flex flex-col justify-between gap-y-23">
+              <div class="flex flex-col gap-8">
+                <div class="flex gap-3">
+                  <img src="/images/logo.svg" alt="" />
+                  <img src="/images/text-logo.svg" alt="" />
+                </div>
+                <div class="flex gap-6">
+                  <img src="/images/icon.png" alt="" />
+                  <img src="/images/icon-ytb.png" alt="" />
+                  <img src="/images/icon-ig.png" alt="" />
+                  <img src="/images/icon-ln.png" alt="" />
+                </div>
+              </div>
+              <p class="text-sm text-white/40">
+                © 2024 Mercury Chemical. All Rights Reserved. Thiết kế web bởi
+                Cánh Cam.
+              </p>
+            </div>
+            <div class="col-span-3 flex flex-col gap-8">
+              <div class="flex flex-col gap-3 text-base">
+                <h1 class="text-lg font-bold leading-7">
+                  Công Ty TNHH Hóa Chất Mercury
+                </h1>
+                <p class="text-white/70 font-light">
+                  Tháp A2.00.02, 74 Nguyễn Cơ Thạch, Khu đô thị Sala, P. An Lợi
+                  Đông, TP. Thủ Đức, TP. Hồ Chí Minh
+                </p>
+                <a href="" class="text-[#5ED8FF] font-extralight"
+                  >Xem trên Google Map</a
+                >
+              </div>
+              <div class="flex flex-col gap-3">
+                <h1>Liên hệ với chúng tôi</h1>
+                <div class="text-base">
+                  <strong>Hotline: </strong
+                  ><span class="font-light text-white/70"
+                    >+(84) 28 22211999</span
+                  >
+                </div>
+                <div class="text-base">
+                  <strong>Email: </strong
+                  ><span class="font-light text-white/70"
+                    >info@mercurychemical.com</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-span-3 flex flex-col gap-8">
+              <h1 class="text-lg font-bold leading-7 text-white">
+                Về Mercury Chemical
+              </h1>
+              <div class="flex flex-col gap-6 text-white/70">
+                <a href=""> Về chúng tôi </a>
+                <a href="">Ý nghĩa thương hiệu</a>
+                <a href="">Tầm nhìn - Sứ mệnh </a>
+                <a href="">Vị trí văn phòng</a>
+                <a href="">Cơ sở vật chất</a>
+              </div>
+            </div>
+            <div class="col-span-3 flex flex-col gap-8">
+              <h1 class="text-lg font-bold leading-7 text-white">
+                Liên kết nhanh
+              </h1>
+              <div class="flex flex-col gap-6 text-white/70">
+                <a href=""> Lĩnh vực hoạt động </a>
+                <a href="">Sản phẩm</a>
+                <a href="">Phát triển bền vững </a>
+                <a href="">Tin tức</a>
+                <a href="">Liên hệ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="/script.js"></script>
+</html>

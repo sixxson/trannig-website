@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vị trí văn phòng</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      .container1 {
+        max-width: 900px;
+        margin: 40px auto;
+        text-align: center;
+        padding: 0 10px;
+      }
+      .title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .hexagon-layout {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        transition: width 0.3s, height 0.3s;
+      }
+      .center-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 320px;
+        height: 320px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        object-fit: cover;
+        z-index: 1;
+      }
+      .item {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background: none;
+      }
+      .item img {
+        width: 100px;
+        object-fit: cover;
+        margin-bottom: 0;
+      }
+      .item .item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .item .distance {
+        font-weight: bold;
+        color: #a10000;
+        font-size: 1.1rem;
+      }
+      .item .desc {
+        font-size: 0.95rem;
+        color: #444;
+      }
+      /* Vị trí các item */
+      /* Item 1: giữa cạnh trên phải của center-img */
+      .item1 {
+        top: 33%;
+        left: 36%;
+        transform: translate(60px, -110px);
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+      /* Item 2: đỉnh trên phải của center-img */
+      .item2 {
+        top: 31%;
+        right: -9%;
+        transform: translate(-50%, 0);
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      /* Item 3: đỉnh dưới phải của center-img */
+      .item3 {
+        bottom: 31%;
+        right: -18%;
+        transform: translate(-50%, 0);
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      /* Item 4: giữa cạnh dưới trái của center-img */
+      .item4 {
+        bottom: 33%;
+        left: 47%;
+        transform: translate(-160px, 110px);
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+      /* Item 5: đỉnh dưới trái của center-img */
+      .item5 {
+        bottom: 31%;
+        left: 20%;
+        transform: translate(-50%, 0);
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+      /* Item 6: đỉnh trên trái của center-img */
+      .item6 {
+        top: 31%;
+        left: 14%;
+        transform: translate(-50%, 0);
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+      /* Responsive */
+      @media (max-width: 800px) {
+        .hexagon-layout {
+          width: 400px;
+          height: 400px;
+        }
+        .center-img {
+          width: 160px;
+          height: 160px;
+        }
+        .item img {
+          width: 48px;
+          height: 48px;
+        }
+        .item .item-text {
+          max-width: 100px;
+        }
+        .title {
+          font-size: 2rem;
+        }
+        .item1 {
+          transform: translate(30px, -55px);
+        }
+        .item4 {
+          transform: translate(-80px, 55px);
+        }
+      }
+      @media (max-width: 500px) {
+        .hexagon-layout {
+          width: 100%;
+          max-width: 320px;
+          height: auto;
+          min-height: unset;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: static;
+        }
+        .center-img {
+          position: static;
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 16px auto;
+          display: block;
+          transform: none;
+          /* Fix: center horizontally */
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .items-mobile {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px 8px;
+          width: 100%;
+          margin-top: 0;
+        }
+        .item {
+          position: static !important;
+          width: 100%;
+          min-width: unset;
+          margin-bottom: 0;
+          align-items: center !important;
+          background: none;
+          display: flex;
+          flex-direction: column !important;
+          text-align: center !important;
+          justify-content: center !important;
+        }
+        .item img {
+          width: 48px;
+          height: 48px;
+        }
+        .title {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+        }
+        .item .distance {
+          font-size: 0.9rem;
+        }
+        .item .desc {
+          font-size: 0.8rem;
+        }
+        .item .item-text {
+          align-items: center !important;
+          text-align: center !important;
+          max-width: unset;
+        }
+        /* Ẩn layout cũ trên mobile */
+        .items-absolute {
+          display: none !important;
+        }
+      }
+      .items-mobile {
+        display: none;
+      }
+      @media (max-width: 500px) {
+        .items-mobile {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="title">Vị trí văn phòng</div>
+      <div class="hexagon-layout">
+        <img src="/images/Group 18830.png" alt="Văn phòng" class="center-img" />
+        <!-- Absolute layout cho desktop -->
+        <div class="items-absolute">
+          <div class="item item1">
+            <img src="/images/Polygon 14.png" alt="Tân Sơn Nhất" />
+            <div class="item-text">
+              <div class="distance">12km - 30 phút</div>
+              <div class="desc">Sân bay Quốc tế Tân Sơn Nhất</div>
+            </div>
+          </div>
+          <div class="item item2">
+            <img src="/images/Polygon 15.png" alt="Cái Mép" />
+            <div class="item-text">
+              <div class="distance">50km - 45 phút</div>
+              <div class="desc">Cảng biển Cái Mép</div>
+            </div>
+          </div>
+          <div class="item item3">
+            <img src="/images/Polygon 15.png" alt="Kinh doanh trung tâm" />
+            <div class="item-text">
+              <div class="distance">6km - 15 phút</div>
+              <div class="desc">Quận kinh doanh trung tâm</div>
+            </div>
+          </div>
+          <div class="item item4">
+            <img src="/images/Polygon 15.png" alt="Văn phòng mới" />
+            <div class="item-text">
+              <div class="distance">1km - 5 phút</div>
+              <div class="desc">Vị trí văn phòng mới</div>
+            </div>
+          </div>
+          <div class="item item5">
+            <img src="/images/Polygon 15.png" alt="Cát Lái" />
+            <div class="item-text">
+              <div class="distance">12km - 30 phút</div>
+              <div class="desc">Cảng Quốc tế Cát Lái</div>
+            </div>
+          </div>
+          <div class="item item6">
+            <img src="/images/Polygon 15.png" alt="Long Thành" />
+            <div class="item-text">
+              <div class="distance">35km - 35 phút</div>
+              <div class="desc">Sân bay Quốc tế Long Thành mới</div>
+            </div>
+          </div>
+        </div>
+        <!-- Grid layout cho mobile -->
+        <div class="items-mobile">
+          <div class="item">
+            <img src="/images/Polygon 14.png" alt="Tân Sơn Nhất" />
+            <div class="item-text">
+              <div class="distance">12km - 30 phút</div>
+              <div class="desc">Sân bay Quốc tế Tân Sơn Nhất</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/Polygon 15.png" alt="Cái Mép" />
+            <div class="item-text">
+              <div class="distance">50km - 45 phút</div>
+              <div class="desc">Cảng biển Cái Mép</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/Polygon 15.png" alt="Kinh doanh trung tâm" />
+            <div class="item-text">
+              <div class="distance">6km - 15 phút</div>
+              <div class="desc">Quận kinh doanh trung tâm</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/Polygon 15.png" alt="Văn phòng mới" />
+            <div class="item-text">
+              <div class="distance">1km - 5 phút</div>
+              <div class="desc">Vị trí văn phòng mới</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/Polygon 15.png" alt="Cát Lái" />
+            <div class="item-text">
+              <div class="distance">12km - 30 phút</div>
+              <div class="desc">Cảng Quốc tế Cát Lái</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/Polygon 15.png" alt="Long Thành" />
+            <div class="item-text">
+              <div class="distance">35km - 35 phút</div>
+              <div class="desc">Sân bay Quốc tế Long Thành mới</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
