@@ -204,9 +204,9 @@
 
 .btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+  top: 30%;
+  transform: translateY(-30%);
+  z-index: 20;
 }
 
 .btn:hover {
