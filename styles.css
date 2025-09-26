@@ -291,3 +291,7 @@
     display: grid;
   }
 }
+
+#default-carousel > div {
+  flex: 0 0 100%; /* mỗi slide full width */
+}

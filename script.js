@@ -8,41 +8,29 @@ window.addEventListener("scroll", function () {
     header.classList.add("header-bg");
   }
 });
-
 document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll("#default-carousel > div"); // item1..item4
+  const track = document.querySelector("#default-carousel");
+  const items = document.querySelectorAll("#default-carousel > div");
   const indicators = document.querySelectorAll("#slider-indicators p");
   const prevBtn = document.getElementById("prev-button");
   const nextBtn = document.getElementById("next-button");
 
   let index = 0;
-  let isAnimating = false;
   let intervalId;
 
-  // Thêm hiệu ứng transition cho các slide
+  // setup style cho track
+  track.style.display = "flex";
+  track.style.transition = "transform 0.5s ease";
+
+  // setup style cho item
   items.forEach((item) => {
-    item.style.transition = "opacity 0.5s";
-    item.style.position = "absolute";
-    item.style.top = 0;
-    item.style.left = 0;
-    item.style.width = "100%";
+    item.style.flex = "0 0 100%"; // mỗi slide chiếm 100%
   });
 
   function showSlide(i) {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    items.forEach((item, idx) => {
-      if (idx === i) {
-        item.style.opacity = 1;
-        item.style.zIndex = 1;
-        item.classList.remove("hidden");
-      } else {
-        item.style.opacity = 0;
-        item.style.zIndex = 0;
-        setTimeout(() => item.classList.add("hidden"), 500);
-      }
-    });
+    index = i;
+    const offset = -index * 100;
+    track.style.transform = `translateX(${offset}%)`;
 
     indicators.forEach((ind, idx) => {
       if (idx === i) {
@@ -51,10 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ind.classList.remove("border-[#BF0006]");
       }
     });
-
-    setTimeout(() => {
-      isAnimating = false;
-    }, 500);
   }
 
   function nextSlide() {
@@ -82,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   indicators.forEach((ind, i) => {
     ind.addEventListener("click", () => {
       clearInterval(intervalId);
-      index = i;
-      showSlide(index);
+      showSlide(i);
       autoPlay();
     });
   });
@@ -92,64 +75,46 @@ document.addEventListener("DOMContentLoaded", () => {
     intervalId = setInterval(nextSlide, 3000);
   }
 
-  // Khởi tạo
-  items.forEach((item, idx) => {
-    if (idx !== index) {
-      item.style.opacity = 0;
-      item.classList.add("hidden");
-    } else {
-      item.style.opacity = 1;
-      item.classList.remove("hidden");
-    }
-    item.style.zIndex = idx === index ? 1 : 0;
-  });
+  // khởi tạo
   showSlide(index);
   autoPlay();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector(".carousel-track");
-  const items = Array.from(document.querySelectorAll(".carousel-item"));
+  const items = document.querySelectorAll(".carousel-item");
   const prevBtn = document.querySelector(".btn.prev");
   const nextBtn = document.querySelector(".btn.next");
-  let current = 0;
 
-  function getVisibleCount() {
-    if (window.innerWidth <= 600) return 1;
-    if (window.innerWidth <= 900) return 2;
-    return 3;
-  }
+  let index = 0;
 
   function updateCarousel() {
-    const visible = getVisibleCount();
-    const itemWidth = items[0].offsetWidth;
-    if (current > items.length - visible) current = items.length - visible;
-    if (current < 0) current = 0;
-    let translateX = current * itemWidth;
-    track.style.transform = `translateX(-${current * itemWidth}px)`;
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current >= items.length - visible;
-    prevBtn.style.opacity = prevBtn.disabled ? 0.5 : 1;
-    nextBtn.style.opacity = nextBtn.disabled ? 0.5 : 1;
+    const itemWidth = items[0].offsetWidth + 20; // 20 = gap
+    track.style.transform = `translateX(-${index * itemWidth}px)`;
   }
 
   nextBtn.addEventListener("click", () => {
-    const visible = getVisibleCount();
-    if (current < items.length - visible) {
-      current++;
+    if (index < items.length - 1) {
+      index++;
       updateCarousel();
     }
   });
 
   prevBtn.addEventListener("click", () => {
-    if (current > 0) {
-      current--;
+    if (index > 0) {
+      index--;
       updateCarousel();
     }
   });
 
-  window.addEventListener("resize", updateCarousel);
-  updateCarousel();
+  // Swipe trên mobile
+  let startX = 0;
+  track.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+  track.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextBtn.click();
+    if (endX - startX > 50) prevBtn.click();
+  });
 });
 
 const btn = document.getElementById("scrollBtn");
