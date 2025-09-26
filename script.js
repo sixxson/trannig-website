@@ -156,7 +156,7 @@ const btn = document.getElementById("scrollBtn");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 600) {
     btn.classList.add("show");
-  } else {  
+  } else {
     btn.classList.remove("show");
   }
 });

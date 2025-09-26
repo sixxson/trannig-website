@@ -12,43 +12,63 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="top">
-    <header class="header header-bg fixed top-0 z-50 w-full bg-[#801618]">
+    <header
+      id="header"
+      class="header header-bg bg-[#801618] fixed top-0 z-50 w-full"
+    >
       <div
-        class="container max-w-[1400px] mx-auto py-5 flex justify-between items-center w-full gap-20 px-4"
+        class="container max-w-[1400px] mx-[260px] py-5 flex justify-between items-center w-full gap-10 lg:gap-[85px]"
       >
         <!-- Logo -->
         <div class="flex items-center gap-3">
           <img src="/images//something.svg" class="lg:h-full h-[45px]" alt="" />
         </div>
         <!-- navBar -->
-        <!-- languageSwitcher -->
-        <nav class="flex-1 h-full hidden xl:block">
-          <ul class="text-nav text-white flex justify-between items-center">
-            <li class="hover:border-b-2 border-white pb-5">
-              <a href="/"><img src="/images/home.png" alt="" /></a>
+        <nav class="shrink-0 flex-1 h-full hidden xl:block ml-[6px]">
+          <ul class="flex justify-between items-start text-nav text-white">
+            <li class="hover:border-b-2 border-white pt-[9px] pb-5">
+              <a href="/"
+                ><img src="/images/home.png" width="24px" height="24px" alt=""
+              /></a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Về chúng tôi</a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Lĩnh vực hoạt động</a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Sản phẩm</a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Phát triển bền vững</a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Tin tức</a>
             </li>
-            <li class="hover:border-b-2 border-white pb-5">
+            <li
+              class="hover:border-b-2 text-lg font-semibold leading-6 border-white pt-3 pb-5"
+            >
               <a href="#">Liên hệ</a>
             </li>
-            <div class="relative flex items-start gap-6 pb-5">
+            <div class="relative flex items-start gap-6 pt-3 pb-5">
               <div class="flex items-center gap-2 font-bold group">
                 <span>VN</span>
                 <img
@@ -135,34 +155,42 @@
     <main class="relative overflow-hidden">
       <!-- content -->
       <!-- hero section -->
-      <section
-        class="relative w-full overflow-x-hidden h-[615px] lg:h-[1015px]"
-      >
+      <section class="relative w-full overflow-x-hidden h-full">
         <div
           id="default-carousel"
-          class="flex transform transition-transform duration-300 ease-in-out"
+          class="flex transform transition-transform duration-300 ease-in-out h-full"
         >
           <!-- item 1 -->
-          <div
-            id="item1"
-            class="space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
-          >
+          <div id="item1" class="relative pb-10 lg:pb-0 min-w-full h-full">
+            <img
+              src="/images/Mask-group.png"
+              alt=""
+              class="w-full h-full object-cover relative z-0"
+            />
             <div
-              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+              class="absolute top-0 z-1 mx-[260px] max-w-[1400px] font-bold text-white"
             >
               <div
-                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+                class="lg:w-[60%] container px-[2px] w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-55 pt-48"
               >
-                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
-                <h1 class="text-3xl lg:text-[64px] leading-tight">
-                  Cam kết mang lại kết quả tối ưu
-                </h1>
-                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
-                  Tích hợp chiến lược nhà cung cấp toàn cầu với những hiểu biết
-                  địa phương, dịch vụ để đạt được kết quả tối ưu.
-                </p>
+                <div class="flex flex-col gap-4">
+                  <p class="text-base font-bold leading-5.5">
+                    TẦM NHÌN - SỨ MỆNH
+                  </p>
+                  <h1
+                    class="text-3xl lg:text-[64px] leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                  >
+                    Cam kết mang lại kết quả tối ưu
+                  </h1>
+                  <p
+                    class="text-base lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                  >
+                    Tích hợp chiến lược nhà cung cấp toàn cầu với những hiểu
+                    biết địa phương, dịch vụ để đạt được kết quả tối ưu.
+                  </p>
+                </div>
                 <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
                 >
                   KHÁM PHÁ THÊM
 
@@ -185,26 +213,36 @@
             </div>
           </div>
           <!-- item 2 -->
-          <div
-            id="item2"
-            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-2.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
-          >
+          <div id="item2" class="relative pb-10 lg:pb-0 min-w-full h-full">
+            <img
+              src="/images/Mask-group.png"
+              alt=""
+              class="w-full h-full object-cover relative z-0"
+            />
             <div
-              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+              class="absolute top-0 z-1 mx-[260px] max-w-[1400px] font-bold text-white"
             >
               <div
-                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+                class="lg:w-[60%] container px-[2px] w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-55 pt-48"
               >
-                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
-                <h1 class="text-3xl lg:text-[64px] leading-tight">
-                  Mang đến giải pháp tùy chỉnh
-                </h1>
-                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
-                  Cung cấp các giải pháp tùy chỉnh để đạt được các mô hình tiết
-                  kiệm chi phí cho khách hàng
-                </p>
+                <div class="flex flex-col gap-4">
+                  <p class="text-base font-bold leading-5.5">
+                    TẦM NHÌN - SỨ MỆNH
+                  </p>
+                  <h1
+                    class="text-3xl lg:text-[64px] leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                  >
+                    Mang đến giải pháp tùy chỉnh
+                  </h1>
+                  <p
+                    class="text-base lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)"
+                  >
+                    Cung cấp các giải pháp tùy chỉnh để đạt được các mô hình
+                    tiết kiệm chi phí cho khách hàng
+                  </p>
+                </div>
                 <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
                 >
                   KHÁM PHÁ THÊM
 
@@ -227,26 +265,36 @@
             </div>
           </div>
           <!-- item 3 -->
-          <div
-            id="item3"
-            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-3.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
-          >
+          <div id="item3" class="relative pb-10 lg:pb-0 min-w-full h-full">
+            <img
+              src="/images/Mask-group.png"
+              alt=""
+              class="w-full h-full object-cover relative z-0"
+            />
             <div
-              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+              class="absolute top-0 z-1 mx-[260px] max-w-[1400px] font-bold text-white"
             >
               <div
-                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+                class="lg:w-[60%] container px-[2px] w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-55 pt-48"
               >
-                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
-                <h1 class="text-3xl lg:text-[64px] leading-tight">
-                  Tạo dựng môi trường làm việc hiệu quả
-                </h1>
-                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
-                  Xây dựng một môi trường làm việc chuyên nghiệp để thu hút nhân
-                  tài
-                </p>
+                <div class="flex flex-col gap-4">
+                  <p class="text-base font-bold leading-5.5">
+                    TẦM NHÌN - SỨ MỆNH
+                  </p>
+                  <h1
+                    class="text-3xl lg:text-[64px] leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                  >
+                    Tạo dựng môi trường làm việc hiệu quả
+                  </h1>
+                  <p
+                    class="text-base lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)"
+                  >
+                    Xây dựng một môi trường làm việc chuyên nghiệp để thu hút
+                    nhân tài
+                  </p>
+                </div>
                 <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
                 >
                   KHÁM PHÁ THÊM
 
@@ -269,27 +317,37 @@
             </div>
           </div>
           <!-- item 4 -->
-          <div
-            id="item4"
-            class="hidden space-y-50 pb-10 lg:pb-0 bg-[url(/images/Mask-group-4.png)] min-w-full bg-cover bg-center lg:bg-top bg-no-repeat h-[615px] lg:h-[1015px]"
-          >
+          <div id="item4" class="relative pb-10 lg:pb-0 min-w-full h-full">
+            <img
+              src="/images/Mask-group.png"
+              alt=""
+              class="w-full h-full object-cover relative z-0"
+            />
             <div
-              class="relative z-1 mx-auto max-w-[1400px] font-bold text-white"
+              class="absolute top-0 z-1 mx-[260px] max-w-[1400px] font-bold text-white"
             >
               <div
-                class="lg:w-[60%] container px-4 lg:mx-0 w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-40 pt-48"
+                class="lg:w-[60%] container px-[2px] w-full flex flex-col items-start gap-3 lg:gap-8 lg:pt-55 pt-48"
               >
-                <p class="text-base">TẦM NHÌN - SỨ MỆNH</p>
-                <h1 class="text-3xl lg:text-[64px] leading-tight">
-                  Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
-                </h1>
-                <p class="text-base lg:text-[20px] leading-tight lg:leading-5">
-                  Đảm bảo tuân thủ đầy đủ các tiêu chuẩn Môi trường, Sức khỏe,
-                  An toàn, và Quy trình áp dụng để đóng góp cho một thế giới tốt
-                  đẹp hơn
-                </p>
+                <div class="flex flex-col gap-4">
+                  <p class="text-base font-bold leading-5.5">
+                    TẦM NHÌN - SỨ MỆNH
+                  </p>
+                  <h1
+                    class="text-3xl lg:text-[64px] leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                  >
+                    Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
+                  </h1>
+                  <p
+                    class="text-base lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)"
+                  >
+                    Đảm bảo tuân thủ đầy đủ các tiêu chuẩn Môi trường, Sức khỏe,
+                    An toàn, và Quy trình áp dụng để đóng góp cho một thế giới
+                    tốt đẹp hơn
+                  </p>
+                </div>
                 <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-6 lg:py-3 text-white px-4.5 py-2.5 hover:bg-white hover:text-[#801618] transition-colors text-sm lg:text-base"
+                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
                 >
                   KHÁM PHÁ THÊM
 
@@ -316,20 +374,26 @@
         <!-- Slider indicators -->
         <div
           id="slider-indicators"
-          class="hidden lg:grid grid-cols-4 gap-3 lg:gap-8 absolute bottom-0 z-1 left-1/2 -translate-x-1/2 container max-w-[1400px] mx-auto pb-20 px-3.5"
+          class="hidden lg:grid grid-cols-4 gap-3 lg:gap-8 absolute bottom-1/10 z-1 left-1/2 -translate-x-1/2 container max-w-[1400px] mx-auto"
         >
           <p
-            class="inline text-lg leading-6 text-white border-b-4 py-5 border-[#BF0006]"
+            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5 border-[#BF0006]"
           >
             Cam kết mang lại kết quả tối ưu
           </p>
-          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+          <p
+            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
+          >
             Mang đến giải pháp tùy chỉnh
           </p>
-          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+          <p
+            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
+          >
             Tạo dựng môi trường làm việc hiệu quả
           </p>
-          <p class="inline text-lg leading-6 text-white border-b-4 py-5">
+          <p
+            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
+          >
             Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
           </p>
         </div>
@@ -374,29 +438,27 @@
         </button>
       </section>
       <!-- section 2 -->
-      <section class="relative container grid grid-cols-2 -mt-14 gap-18">
+      <section class="contanier gap-12 flex items-center -mt-14">
         <img
           src="/images/image.png"
-          class="relative -z-10 h-full object-cover md:col-span-1 col-span-full"
+          class="object-cover md:col-span-1 col-span-full"
           alt=""
         />
         <div
-          class="flex flex-col lg:gap-10 mt-20 px-3.5 gap-6 lg:mt-14 justify-center lg:mb-0 mb-10 md:col-span-1 col-span-full"
+          class="flex flex-col lg:gap-10 gap-6 justify-center pl-4.5 pb-5 lg:mb-0 mb-10 md:col-span-1 col-span-full"
         >
-          <img src="/images/text.svg" class="w-full" alt="" />
-          <p
-            class="text-base lg:text-lg md:px-4 lg:px-0 leading-7 lg:leading-8"
-          >
+          <img src="/images/Frame text.png" alt="" width="600px" />
+          <p class="text-base lg:text-lg md:px-4 lg:px-0 leading-6 w-[72.5%]">
             Các cổ đông của Mercury Chemical là những nhà hóa học dày dặn kinh
             nghiệm, tích lũy qua nhiều năm làm việc tại Việt Nam và các quốc gia
             châu Á. Sự kết hợp giữa kiến thức chuyên môn từ các tập đoàn quốc tế
             và hiểu biết sâu sắc về thị trường địa phương giúp doanh nghiệp đáp
             ứng tốt các yêu cầu của các đối tác đa quốc gia.
           </p>
-          <div class="flex gap-3 items-center">
+          <div class="flex gap-6 pt-3 items-center">
             <span class="text-base font-bold leading-5.5"> VỀ CHÚNG TÔI</span>
             <button
-              class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+              class="border-2 border-[#801618] rounded-md rotate-45 p-1 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -420,15 +482,14 @@
       <section
         class="w-full px-5 bg-[url(/images/bg-section-3.png)] py-20 bg-cover"
       >
-        <h1 class="text-5xl font-semibold leading-15.5 text-center mb-10">
+        <h1
+          class="text-5xl font-semibold leading-15.5 text-center lg:mt-[-5px] lg:mb-10"
+        >
           Ứng dụng
         </h1>
-        <div
-          class="flex overflow-x-auto gap-5 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:overflow-visible"
-        >
-          <!-- item -->
+        <div class="flex lg:hidden overflow-x-auto gap-5 snap-x snap-mandatory">
           <div
-            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center"
           >
             <div
               class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
@@ -513,9 +574,8 @@
               </div>
             </div>
           </div>
-          <!-- item -->
           <div
-            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center"
           >
             <div
               class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
@@ -600,9 +660,8 @@
               </div>
             </div>
           </div>
-          <!-- item -->
           <div
-            class="relative flex-shrink-0 w-80 lg:w-auto lg:aspect-video flex flex-col gap-5 z-10 snap-center"
+            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center lg:pt-10"
           >
             <div
               class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
@@ -688,13 +747,265 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="overflow-x-auto gap-5 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:overflow-visible lg:grid-rows-2"
+        >
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-5.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              PIN LITHIUM
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment. The philosophy of
+                providing a comfortable and healthy
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-1.5 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-6.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              Ô TÔ
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment.
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-5.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              PIN LITHIUM
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment.
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-5.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              PIN LITHIUM
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment.
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-5.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              PIN LITHIUM
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment.
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
+          >
+            <img
+              src="/images/item-5.png"
+              alt=""
+              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <h1
+              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
+            >
+              PIN LITHIUM
+            </h1>
+            <div
+              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+            >
+              <p class="text-lg leading-6">
+                A Green building achieves more with less. It consumes less
+                energy and wastes fewer resources, embodying a greater
+                responsibility towards the environment.
+              </p>
+              <button
+                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="-rotate-45"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="py-10 w-full">
           <div class="h-1 w-full bg-[#801618]"></div>
         </div>
         <div class="flex gap-3 items-center justify-center h-14">
           <span class="text-base font-bold leading-5.5">XEM THÊM</span>
           <button
-            class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            class="border-2 border-[#801618] rounded-md rotate-45 p-1.5 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -714,9 +1025,9 @@
         </div>
       </section>
       <!-- section 4 -->
-      <section class="lg:pt-[103px] lg:pb-[85px]">
+      <section class="lg:pt-[64px]">
         <div class="con1">
-          <div class="title">Vị trí văn phòng</div>
+          <div class="text-5xl leading-15 font-semibold">Vị trí văn phòng</div>
           <div class="hexagon-layout">
             <img
               src="/images/Group 18830.png"
@@ -725,70 +1036,106 @@
             />
             <!-- Absolute layout cho desktop -->
             <div class="items-absolute">
-              <div class="item item1 group">
+              <div class="item lg:gap-[26px] gap-4 item1 group">
                 <img
                   src="/images/Polygon 14.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Tân Sơn Nhất"
                 />
-                <div class="item-text">
-                  <div class="distance">12km - 30 phút</div>
-                  <div class="desc">Sân bay Quốc tế Tân Sơn Nhất</div>
+                <div class="item-text text-left">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    12km - 30 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Sân bay Quốc tế Tân Sơn Nhất
+                  </div>
                 </div>
               </div>
-              <div class="item item2 group">
+              <div class="item lg:gap-[26px] gap-4 item2 group">
                 <img
                   src="/images/Polygon 15.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Cái Mép"
                 />
-                <div class="item-text">
-                  <div class="distance">50km - 45 phút</div>
-                  <div class="desc">Cảng biển Cái Mép</div>
+                <div class="item-text text-left">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    50km - 45 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Cảng biển Cái Mép
+                  </div>
                 </div>
               </div>
-              <div class="item item3 group">
+              <div class="item lg:gap-[26px] gap-4 item3 group">
                 <img
                   src="/images/Polygon 15.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Kinh doanh trung tâm"
                 />
-                <div class="item-text">
-                  <div class="distance">6km - 15 phút</div>
-                  <div class="desc">Quận kinh doanh trung tâm</div>
+                <div class="item-text text-left">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    6km - 15 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Quận kinh doanh trung tâm
+                  </div>
                 </div>
               </div>
-              <div class="item item4 group">
+              <div class="item lg:gap-[26px] gap-4 item4 group">
                 <img
                   src="/images/Polygon 15.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Văn phòng mới"
                 />
-                <div class="item-text">
-                  <div class="distance">1km - 5 phút</div>
-                  <div class="desc">Vị trí văn phòng mới</div>
+                <div class="item-text text-right">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    1km - 5 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Vị trí văn phòng mới
+                  </div>
                 </div>
               </div>
-              <div class="item item5 group">
+              <div class="item lg:gap-[26px] gap-4 item5 group">
                 <img
                   src="/images/Polygon 15.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Cát Lái"
                 />
-                <div class="item-text">
-                  <div class="distance">12km - 30 phút</div>
-                  <div class="desc">Cảng Quốc tế Cát Lái</div>
+                <div class="item-text text-right">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    12km - 30 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Cảng Quốc tế Cát Lái
+                  </div>
                 </div>
               </div>
-              <div class="item item6 group">
+              <div class="item lg:gap-[26px] gap-4 item6 group">
                 <img
                   src="/images/Polygon 15.png"
                   class="transition-transform duration-300 group-hover:scale-105"
                   alt="Long Thành"
                 />
-                <div class="item-text">
-                  <div class="distance">35km - 35 phút</div>
-                  <div class="desc">Sân bay Quốc tế Long Thành mới</div>
+                <div class="item-text text-right">
+                  <div
+                    class="distance text-lg lg:text-[32px] font-bold leading-[38px]"
+                  >
+                    35km - 35 phút
+                  </div>
+                  <div class="desc lg:text-[20px] leading-7">
+                    Sân bay Quốc tế Long Thành mới
+                  </div>
                 </div>
               </div>
             </div>
@@ -841,15 +1188,17 @@
         </div>
       </section>
       <!-- section 5 -->
-      <section class="bg-[url(/images/Polygon 21.png)] px-4">
+      <section
+        class="relative bg-[url(/images/Polygon 21.png) px-4 before:content-[''] before:absolute before:-z-10 before:inset-0 before:bg-[#F3F3F3]"
+      >
         <div
-          class="pt-22 pb-28 mx-auto container lg:w-[1400px] lg:flex lg:flex-row flex flex-col-reverse justify-between items-center md:grid md:grid-cols-2 md:gap-10"
+          class="pt-22 pb-28 mx-auto container justify-around lg:w-[1400px] lg:flex lg:flex-row flex flex-col-reverse items-center md:grid md:grid-cols-2 md:gap-28"
         >
           <div
-            class="md:col-span-1 flex flex-col lg:gap-10 md:gap-5 gap-3 lg:w-[572px]"
+            class="pb-[10px] md:col-span-1 flex flex-col lg:gap-10 md:gap-5 gap-3 lg:w-[572px]"
           >
             <h1
-              class="font-semibold lg:text-5xl md:text-3xl text-2xl leading-15"
+              class="font-semibold lg:text-5xl md:text-3xl text-2xl leading-15 title-h1"
             >
               Cơ sở vật chất
               <br />
@@ -876,15 +1225,15 @@
         </div>
       </section>
       <!-- section 6 -->
-      <section class="py-20 space-y-10">
+      <section class="pt-20 pb-17">
         <h1
-          class="lg:text-5xl md:text-3xl text-2xl font-semibold leading-15 text-center"
+          class="lg:text-5xl md:text-3xl text-2xl font-semibold leading-15 text-center -mt-4 pb-10"
         >
           Tin tức nổi bật
         </h1>
         <div class="contanier relative">
           <button
-            class="btn prev lg:left-1/14 left-0 bg-black/40 rounded-lg p-2 rotate-45"
+            class="btn prev lg:left-[8%] left-0 bg-black/40 p-3 rotate-45"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -907,6 +1256,7 @@
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
+                  class="h-[52%] w-[96%]"
                 />
                 <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-3 text-slate-500">
@@ -927,7 +1277,7 @@
                     </svg>
                     <p>20.06.2024</p>
                   </div>
-                  <h1 class="text-2xl font-bold leading-7">
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
@@ -936,6 +1286,7 @@
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
+                  class="h-[52%] w-[96%]"
                 />
                 <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-3 text-slate-500">
@@ -956,7 +1307,7 @@
                     </svg>
                     <div>20.06.2024</div>
                   </div>
-                  <h1 class="text-2xl font-bold leading-7">
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
@@ -965,6 +1316,7 @@
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
+                  class="h-[52%] w-[96%]"
                 />
                 <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-3 text-slate-500">
@@ -985,7 +1337,7 @@
                     </svg>
                     <div>20.06.2024</div>
                   </div>
-                  <h1 class="text-2xl font-bold leading-7">
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
@@ -994,6 +1346,7 @@
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
+                  class="h-[52%] w-[96%]"
                 />
                 <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-3 text-slate-500">
@@ -1014,7 +1367,7 @@
                     </svg>
                     <div>20.06.2024</div>
                   </div>
-                  <h1 class="text-2xl font-bold leading-7">
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
@@ -1023,6 +1376,7 @@
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
+                  class="h-[52%] w-[96%]"
                 />
                 <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-3 text-slate-500">
@@ -1043,7 +1397,7 @@
                     </svg>
                     <div>20.06.2024</div>
                   </div>
-                  <h1 class="text-2xl font-bold leading-7">
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
@@ -1051,7 +1405,7 @@
             </div>
           </div>
           <button
-            class="btn next lg:right-1/12 right-0 bg-black/40 rounded-lg rotate-45 p-2"
+            class="btn next lg:right-[9%] right-0 bg-black/40 rotate-45 p-3"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1069,10 +1423,12 @@
             </svg>
           </button>
         </div>
-        <div class="flex gap-3 items-center justify-center h-14">
+        <div
+          class="flex gap-5 items-center justify-center h-14 -mt-11.5 mb-2.5"
+        >
           <span class="text-base font-bold leading-5.5">XEM THÊM</span>
           <button
-            class="border-2 border-[#801618] rounded-md rotate-45 p-2 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            class="border-2 border-[#801618] rounded rotate-45 p-1 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1093,14 +1449,14 @@
       </section>
       <!-- section 7 -->
       <section
-        class="container mx-auto grid grid-cols-12 lg:gap-10 md:gap-5 gap-2 bg-[url(/images/bg-section.png)] bg-cover lg:px-25 py-38.5 md:px-10 lg:mb-20 md:mb-10 mb-5"
+        class="w-[1600px] mx-auto grid grid-cols-12 lg:gap-10 md:gap-5 gap-2 bg-[url(/images/bg-section.png)] bg-cover lg:px-25 py-38.5 md:px-10 lg:mb-20 md:mb-10 mb-5"
       >
         <div
           class="flex flex-col lg:gap-10 md:gap-5 gap-2 lg:col-span-5 md:col-span-6 col-span-full"
         >
-          <div class="flex flex-col gap-3 text-white">
+          <div class="flex flex-col gap-4 text-white">
             <h1
-              class="lg:text-5xl md:text-4xl text-3xl font-bold lg:leading-15 md:leading-13 leading-11"
+              class="lg:text-5xl md:text-4xl text-3xl font-bold lg:leading-15 md:leading-13 leading-11 tracking-[-1px]"
             >
               Hóa học cho một thế giới tốt đẹp hơn
             </h1>
@@ -1137,7 +1493,9 @@
       </section>
       <!-- footer -->
     </main>
-    <div class="flex flex-col md:gap-5 gap-2 md:px-5 px-2 fixed right-0 md:bottom-20 bottom-3 z-50">
+    <div
+      class="flex flex-col md:gap-5 gap-2 md:px-5 px-2 fixed right-0 md:bottom-20 bottom-3 z-50"
+    >
       <div class="rounded-md bg-[#525252] p-2.5 flex justify-center">
         <a href="#top" id="scrollBtn">
           <img src="/images/arrow-up-to-line.png" alt="" class="md:w-7 w-3" />
@@ -1150,29 +1508,31 @@
         <img src="/images/phone.png" alt="" class="md:w-7 w-3" />
       </div>
     </div>
-    <footer class="bg-[url(/images/Frame-100.png)] py-10 rou">
+    <footer class="bg-[url(/images/Frame-100.png)] py-10">
       <div
-        class="container max-w-[1400px] text-white mx-auto space-y-10 flex flex-col gap-15 px-4"
+        class="container max-w-[1400px] text-white mx-auto flex flex-col space-y-10"
       >
         <div
-          class="flex md:flex-row flex-col justify-between items-center lg:gap-80 md:gap-20 gap-10"
+          class="flex md:flex-row flex-col justify-between items-center lg:gap-50 md:gap-20 gap-10 border-b-2 border-white/40 lg:pb-[52px]"
         >
-          <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold leading-9.5">
+          <h1
+            class="lg:text-4xl md:text-3xl text-2xl font-bold !leading-10 tracking-[-2px] pt-[10px]"
+          >
             Cập nhật tin tức, sự kiện mới nhất từ Mercury Chemical!
           </h1>
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-4.5">
             <p>
               Vui lòng nhập email của bạn để nhận được những tin tức, sự kiện,
               ưu đãi mới nhất từ Mercury Chemical.
             </p>
-            <form action="" class="flex justify-between items-center gap-3">
+            <form action="" class="flex justify-between items-center gap-7">
               <input
                 type="email"
                 placeholder="Nhập email"
-                class="py-3 px-6 flex-1 rounded-lg bg-white text-black"
+                class="py-3 px-6 flex-1 bg-white text-black rounded-sm"
               />
               <button
-                class="rounded-lg rotate-45 border-2 border-red p-1"
+                class="rounded-md rotate-45 border-2 border-red p-2"
                 type="submit"
               >
                 <svg
@@ -1193,15 +1553,10 @@
             </form>
           </div>
         </div>
-        <div class="grid grid-cols-12 lg:gap-10 md:gap-5 gap-2">
-          <div
-            class="md:col-span-3 col-span-full flex flex-col justify-between gap-y-23"
-          >
-            <div class="flex flex-col gap-8">
-              <div class="flex gap-3">
-                <img src="/images/logo.svg" alt="" />
-                <img src="/images/text-logo.svg" alt="" />
-              </div>
+        <div class="flex self-stretch justify-between md:gap-5 gap-2">
+          <div class="flex flex-col justify-between basis-[23%]">
+            <div class="flex flex-col gap-9">
+              <img src="/images/Frame.png" alt="" class="w-[70%] pt-3" />
               <div class="flex gap-6">
                 <img src="/images/icon.png" alt="" />
                 <img src="/images/icon-ytb.png" alt="" />
@@ -1214,7 +1569,7 @@
               Cánh Cam.
             </p>
           </div>
-          <div class="md:col-span-3 col-span-full flex flex-col gap-8">
+          <div class="flex flex-col justify-between basis-1/4 py-2.5 -ml-4">
             <div class="flex flex-col gap-3 text-base">
               <h1 class="text-lg font-bold leading-7">
                 Công Ty TNHH Hóa Chất Mercury
@@ -1241,7 +1596,7 @@
               </div>
             </div>
           </div>
-          <div class="md:col-span-3 col-span-full flex flex-col gap-8">
+          <div class="flex flex-col gap-5 basis-[15%] -ml-10 py-3">
             <h1 class="text-lg font-bold leading-7 text-white">
               Về Mercury Chemical
             </h1>
@@ -1253,7 +1608,7 @@
               <a href="">Cơ sở vật chất</a>
             </div>
           </div>
-          <div class="md:col-span-3 col-span-full flex flex-col gap-8">
+          <div class="flex flex-col gap-5 basis-[14%] py-3">
             <h1 class="text-lg font-bold leading-7 text-white">
               Liên kết nhanh
             </h1>
@@ -1269,5 +1624,5 @@
       </div>
     </footer>
   </body>
-  <script src="/script.js"></script>
+  <!-- <script src="/script.js"></script> -->
 </html>

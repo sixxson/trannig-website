@@ -37,8 +37,8 @@
 }
 .hexagon-layout {
   position: relative;
-  width: 800px;
-  height: 800px;
+  width: 875px;
+  height: 832px;
   margin: 0 auto;
   transition: width 0.3s, height 0.3s;
 }
@@ -46,8 +46,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 400px;
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   object-fit: cover;
@@ -58,80 +56,72 @@
   display: flex;
   align-items: center;
   background: none;
+  z-index: 5;
 }
 .item img {
-  width: 100px;
+  width: 140px;
   object-fit: cover;
   margin-bottom: 0;
 }
 .item .item-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 13px;
 }
 .item .distance {
-  font-weight: bold;
   color: #a10000;
-  font-size: 1.1rem;
 }
 .item .desc {
-  font-size: 0.95rem;
   color: #444;
 }
 /* Vị trí các item */
 /* Item 1: giữa cạnh trên phải của center-img */
 .item1 {
-  top: 29%;
-  left: 36%;
-  transform: translate(60px, -110px);
+  top: 0;
+  left: 35%;
+  transform: translate(14.5%, 20.5%);
   flex-direction: row;
   justify-content: flex-end;
-  gap: 20px;
 }
 /* Item 2: đỉnh trên phải của center-img */
 .item2 {
-  top: 28%;
-  right: -15%;
-  transform: translate(-50%, 0);
+  top: 20%;
+  right: 0;
+  transform: translate(42%, 13%);
   flex-direction: row;
   justify-content: flex-end;
-  gap: 20px;
 }
 /* Item 3: đỉnh dưới phải của center-img */
 .item3 {
-  bottom: 29%;
-  right: -25%;
-  transform: translate(-50%, 0);
+  bottom: 30%;
+  right: 0;
+  transform: translate(45%, 41%);
   flex-direction: row;
   justify-content: flex-end;
-  gap: 20px;
 }
 /* Item 4: giữa cạnh dưới trái của center-img */
 .item4 {
-  bottom: 28%;
-  left: 45%;
-  transform: translate(-160px, 110px);
+  bottom: 2%;
+  left: 25%;
+  transform: translate(-19%, -11%);
   flex-direction: row-reverse;
   justify-content: flex-start;
-  gap: 20px;
 }
 /* Item 5: đỉnh dưới trái của center-img */
 .item5 {
-  bottom: 29%;
-  left: 15%;
-  transform: translate(-50%, 0);
+  bottom: 30%;
+  left: 10%;
+  transform: translate(-65%, 41%);
   flex-direction: row-reverse;
   justify-content: flex-start;
-  gap: 20px;
 }
 /* Item 6: đỉnh trên trái của center-img */
 .item6 {
-  top: 28%;
-  left: 10%;
-  transform: translate(-50%, 0);
+  top: 20%;
+  left: 0;
+  transform: translate(-51%, 13%);
   flex-direction: row-reverse;
   justify-content: flex-start;
-  gap: 20px;
 }
 /* Responsive */
 @media (max-width: 800px) {
@@ -143,31 +133,31 @@
     width: 300px;
   }
   .item img {
-    width: 70px;
+    width: 90px;
   }
   .title {
     font-size: 2rem;
   }
   .item-text {
-    width: 128px;
+    width: 60%;
   }
   .item1 {
-    transform: translate(16%, -180%);
+    transform: translate(2%, 20%);
   }
   .item2 {
-    transform: translate(21%, -30%);
+    transform: translate(40%, 10%);
   }
   .item3 {
-    transform: translate(-3%, 36%);
+    transform: translate(49%, 39%);
   }
   .item4 {
-    transform: translate(-73%, 179%);
+    transform: translate(-28%, -8%);
   }
   .item5 {
-    transform: translate(-89%, 35%);
+    transform: translate(-65%, 39%);
   }
   .item6 {
-    transform: translate(-77%, -28%);
+    transform: translate(-57%, 10%);
   }
 }
 
@@ -186,13 +176,14 @@
   display: flex;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
   will-change: transform;
+  gap: 10px;
 }
 .carousel-item {
   min-width: 33.3333%;
   max-width: 33.3333%;
   flex: 0 0 33.3333%;
   box-sizing: border-box;
-  padding: 0 10px;
+  gap: 17px;
 }
 @media (max-width: 900px) {
   .carousel-item {
@@ -202,9 +193,12 @@
   }
 }
 
+.title-h1 {
+  font-family: "Open Sans";
+}
 .btn {
   position: absolute;
-  top: 30%;
+  top: 37%;
   transform: translateY(-30%);
   z-index: 20;
 }
@@ -278,10 +272,7 @@
   .item img {
     width: 70px;
   }
-  .title {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
+
   .item .distance {
     font-size: 0.9rem;
   }
@@ -289,10 +280,9 @@
     font-size: 0.8rem;
   }
   .item .item-text {
-    align-items: center !important;
-    text-align: center !important;
     max-width: unset;
   }
+
   /* Ẩn layout cũ trên mobile */
   .items-absolute {
     display: none !important;
