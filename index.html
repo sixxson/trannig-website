@@ -8,6 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -24,11 +29,11 @@
       class="header header-bg bg-[#801618] fixed top-0 z-50 w-full"
     >
       <div
-        class="container max-w-[1400px] mx-auto px-3 2xl:mx-[260px] py-5 flex justify-between items-center w-full gap-10 lg:gap-[85px]"
+        class="container 2xl:max-w-[1400px] mx-auto xl:px-0 px-3 py-5 flex justify-between items-center w-full gap-10 lg:gap-[85px]"
       >
         <!-- Logo -->
         <div class="flex items-center gap-3">
-          <img src="./images/something.svg" class="lg:h-full h-[45px]" alt="" />
+          <img src="./images/something.svg" class="lg:w-8/10 w-full" alt="" />
         </div>
         <!-- navBar -->
         <nav class="shrink-0 flex-1 h-full hidden xl:block ml-[6px]">
@@ -114,7 +119,6 @@
                 >EN</span
               >
             </div>
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -131,294 +135,244 @@
               <circle cx="11" cy="11" r="8" />
             </svg>
           </div>
-          <button class="bg-[#801618] p-2 inline-block">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu-icon lucide-menu"
-            >
-              <path d="M4 5h16" />
-              <path d="M4 12h16" />
-              <path d="M4 19h16" />
-            </svg>
-          </button>
+          <div
+            id="menuBtn"
+            class="header-hambuger relative p-2 inline-block hamburger type2 cursor-pointer"
+          >
+            <div class="menu_icon">
+              <span class="border border1"></span>
+              <span class="border border2"></span>
+              <span class="border border3"></span>
+            </div>
+            <!-- Hiệu ứng pulse -->
+            <div id="pulseMe">
+              <div class="bar left"></div>
+              <div class="bar top"></div>
+              <div class="bar right"></div>
+              <div class="bar bottom"></div>
+            </div>
+          </div>
+        </nav>
+        <nav id="mobileNav" class="mobile-nav">
+          <ul
+            class="flex flex-col text-white gap-5 text-2xl font-bold py-4 px-3"
+          >
+            <li>
+              <a href="#" class="block border-b-2 border-white/50">Trang chủ</a>
+            </li>
+            <li>
+              <a href="#" class="block">Về chúng tôi</a>
+            </li>
+            <li>
+              <a href="#" class="block">Lĩnh vực hoạt động</a>
+            </li>
+            <li>
+              <a href="#" class="block">Sản phẩm</a>
+            </li>
+            <li>
+              <a href="#" class="block">Phát triển bền vững</a>
+            </li>
+            <li><a href="#" class="block">Tin Tức</a></li>
+            <li><a href="#" class="block">Liên Hệ</a></li>
+          </ul>
         </nav>
       </div>
     </header>
-    <main class="relative overflow-hidden">
+    <main class="overflow-hidden">
       <!-- content -->
       <!-- hero section -->
-      <section class="relative w-full overflow-x-hidden h-fit">
-        <div
-          id="default-carousel"
-          class="flex transform transition-transform duration-300 ease-in-out h-full"
-        >
-          <!-- item 1 -->
-          <div id="item1" class="relative pb-10 lg:pb-0 min-w-full h-full">
+      <section
+        class="w-full h-full visionSwiper relative text-white overflow-hidden"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img
               src="./images/Mask-group.png"
               alt=""
-              class="w-full h-full object-cover relative z-0"
+              class="w-full xl:h-full h-[600px] object-cover relative z-0"
             />
             <div
-              class="absolute top-0 z-10 w-full px-4 mx-auto 2xl:mx-[260px] max-w-[1400px] font-bold text-white"
+              class="absolute xl:top-[39%] top-4/10 xl:left-[23%] lg:left-[22%] left-[28%] -translate-x-[25%] -translate-y-[45%] z-10 xl:w-[43%] lg:w-5/10 w-fit mx-auto max-w-[1400px] font-bold flex flex-col justify-cente items-start gap-8"
             >
-              <div
-                class="w-full 2xl:w-[60%] flex flex-col items-start gap-3 lg:gap-8 pt-32 xl:pt-56"
-              >
-                <div class="flex flex-col gap-4">
-                  <p class="text-sm lg:text-base font-bold leading-5.5">
-                    TẦM NHÌN - SỨ MỆNH
-                  </p>
-                  <h1
-                    class="text-2xl lg:text-[64px] leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Cam kết mang lại kết quả tối ưu
-                  </h1>
-                  <p
-                    class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Tích hợp chiến lược nhà cung cấp toàn cầu với những hiểu
-                    biết địa phương, dịch vụ để đạt được kết quả tối ưu.
-                  </p>
-                </div>
-                <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white px-4 py-2 lg:px-6 lg:py-3 text-white hover:bg-black hover:text-[#801618] transition-colors text-xs lg:text-sm font-bold"
+              <div class="flex flex-col gap-4">
+                <p class="text-sm lg:text-base font-bold leading-5.5">
+                  TẦM NHÌN - SỨ MỆNH
+                </p>
+                <h1
+                  class="text-2xl xl:text-[64px] lg:text-4xl leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
                 >
-                  KHÁM PHÁ THÊM
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-right"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
+                  Cam kết mang lại kết quả tối ưu
+                </h1>
+                <p
+                  class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                >
+                  Tích hợp chiến lược nhà cung cấp toàn cầu với những hiểu biết
+                  địa phương, dịch vụ để đạt được kết quả tối ưu.
+                </p>
               </div>
+              <button
+                class="button flex items-center gap-3 bg-[#801618] px-4 py-2 lg:px-5 lg:py-4 text-white hover:bg-black transition-colors text-xs lg:text-sm font-bold"
+              >
+                KHÁM PHÁ THÊM
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </div>
-          <!-- item 2 -->
-          <div id="item2" class="relative pb-10 lg:pb-0 min-w-full h-full">
+          <div class="swiper-slide">
             <img
               src="./images/Mask-group-2.png"
               alt=""
-              class="w-full h-full object-cover relative z-0"
+              class="w-full lg:h-full h-[600px] object-cover relative z-0 "
             />
             <div
-              class="absolute top-0 z-10 w-full px-4 mx-auto 2xl:mx-[260px] max-w-[1400px] font-bold text-white"
+              class="absolute top-[39%] lg:left-[21%] left-[26%] -translate-x-[25%] -translate-y-[45%] z-10 xl:w-[35%] lg:w-5/10 w-fit mx-auto max-w-[1400px] font-bold flex flex-col justify-cente items-start gap-8"
             >
-              <div
-                class="w-full 2xl:w-[60%] flex flex-col items-start gap-3 lg:gap-8 pt-32 xl:pt-56"
-              >
-                <div class="flex flex-col gap-4">
-                  <p class="text-sm lg:text-base font-bold leading-5.5">
-                    TẦM NHÌN - SỨ MỆNH
-                  </p>
-                  <h1
-                    class="text-2xl lg:text-[64px] leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Mang đến giải pháp tùy chỉnh
-                  </h1>
-                  <p
-                    class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Cung cấp các giải pháp tùy chỉnh để đạt được các mô hình
-                    tiết kiệm chi phí cho khách hàng
-                  </p>
-                </div>
-                <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white px-4 py-2 lg:px-6 lg:py-3 text-white hover:bg-black hover:text-[#801618] transition-colors text-xs lg:text-sm font-bold"
+              <div class="flex flex-col gap-4">
+                <p class="text-sm lg:text-base font-bold leading-5.5">
+                  TẦM NHÌN - SỨ MỆNH
+                </p>
+                <h1
+                  class="text-2xl xl:text-[64px] lg:text-4xl leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
                 >
-                  KHÁM PHÁ THÊM
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-right"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
+                  Mang đến giải pháp tùy chỉnh
+                </h1>
+                <p
+                  class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                >
+                  Cung cấp các giải pháp tùy chỉnh để đạt được các mô hình tiết
+                  kiệm chi phí cho khách hàng
+                </p>
               </div>
+              <button
+                class="button flex items-center gap-3 bg-[#801618] px-4 py-2 lg:px-5 lg:py-4 text-white hover:bg-black transition-colors text-xs lg:text-sm font-bold"
+              >
+                KHÁM PHÁ THÊM
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </div>
-          <!-- item 3 -->
-          <div id="item3" class="relative pb-10 lg:pb-0 min-w-full h-full">
+          <div class="swiper-slide">
             <img
               src="./images/Mask-group-3.png"
               alt=""
-              class="w-full h-full object-cover relative z-0"
+              class="w-full lg:h-full h-[600px] object-cover relative z-0"
             />
             <div
-              class="absolute top-0 z-10 w-full px-4 mx-auto 2xl:mx-[260px] max-w-[1400px] font-bold text-white"
+              class="absolute top-[39%] lg:left-[24%] left-[22%] -translate-x-[25%] -translate-y-[45%] z-10 xl:w-[48%] lg:w-6/10 w-fit mx-auto max-w-[1400px] font-bold flex flex-col justify-cente items-start gap-8"
             >
-              <div
-                class="w-full 2xl:w-[60%] flex flex-col items-start gap-3 lg:gap-8 pt-32 xl:pt-56"
-              >
-                <div class="flex flex-col gap-4">
-                  <p class="text-base font-bold leading-5.5">
-                    TẦM NHÌN - SỨ MỆNH
-                  </p>
-                  <h1
-                    class="text-2xl lg:text-[64px] leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Tạo dựng môi trường làm việc hiệu quả
-                  </h1>
-                  <p
-                    class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Xây dựng một môi trường làm việc chuyên nghiệp để thu hút
-                    nhân tài
-                  </p>
-                </div>
-                <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
+              <div class="flex flex-col gap-4">
+                <p class="text-base font-bold leading-5.5">
+                  TẦM NHÌN - SỨ MỆNH
+                </p>
+                <h1
+                  class="text-2xl xl:text-[64px] lg:text-4xl leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
                 >
-                  KHÁM PHÁ THÊM
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
+                  Tạo dựng môi trường làm việc hiệu quả
+                </h1>
+                <p
+                  class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                >
+                  Xây dựng một môi trường làm việc chuyên nghiệp để thu hút nhân
+                  tài
+                </p>
               </div>
+              <button
+                class="button flex items-center gap-3 bg-[#801618] px-4 py-2 lg:px-5 lg:py-4 text-white hover:bg-black transition-colors text-xs lg:text-sm font-bold"
+              >
+                KHÁM PHÁ THÊM
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </div>
-          <!-- item 4 -->
-          <div id="item4" class="relative pb-10 lg:pb-0 min-w-full h-full">
+          <div class="swiper-slide">
             <img
               src="./images/Mask-group-4.png"
               alt=""
-              class="w-full h-full object-cover relative z-0"
+              class="w-full lg:h-full h-[600px] object-cover relative z-0"
             />
             <div
-              class="absolute top-0 z-10 w-full px-4 mx-auto 2xl:mx-[260px] max-w-[1400px] font-bold text-white"
+              class="absolute top-[39%] xl:left-[32%] lg:left-[25%] left-[31%] -translate-x-[30%] -translate-y-[45%] z-10 xl:w-[65%] lg:w-[55%] w-fit mx-auto max-w-[1400px] font-bold flex flex-col justify-cente items-start gap-8"
             >
-              <div
-                class="w-full 2xl:w-[60%] flex flex-col items-start gap-3 lg:gap-8 pt-32 xl:pt-56"
-              >
-                <div class="flex flex-col gap-4">
-                  <p class="text-base font-bold leading-5.5">
-                    TẦM NHÌN - SỨ MỆNH
-                  </p>
-                  <h1
-                    class="text-2xl lg:text-[64px] leading-snug lg:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
-                  </h1>
-                  <p
-                    class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
-                  >
-                    Đảm bảo tuân thủ đầy đủ các tiêu chuẩn Môi trường, Sức khỏe,
-                    An toàn, và Quy trình áp dụng để đóng góp cho một thế giới
-                    tốt đẹp hơn
-                  </p>
-                </div>
-                <button
-                  class="flex items-center gap-3 border-2 bg-[#801618] border-white lg:px-4 lg:py-3 text-white px-4.5 py-2.5 hover:bg-black hover:text-[#801618] transition-colors text-sm lg:text-sm font-bold leading-4.5"
+              <div class="flex flex-col gap-4">
+                <p class="text-base font-bold leading-5.5">
+                  TẦM NHÌN - SỨ MỆNH
+                </p>
+                <h1
+                  class="text-2xl xl:text-[64px] lg:text-4xl leading-snug xl:leading-[76px] font-bold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
                 >
-                  KHÁM PHÁ THÊM
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-chevron-right-icon lucide-chevron-right"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
+                  Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
+                </h1>
+                <p
+                  class="text-sm lg:text-[20px] leading-tight lg:leading-7 font-semibold text-shadow-[0_0_25px_rgba(0_0_0_/_0.1)]"
+                >
+                  Đảm bảo tuân thủ đầy đủ các tiêu chuẩn Môi trường, Sức khỏe,
+                  An toàn, và Quy trình áp dụng để đóng góp cho một thế giới tốt
+                  đẹp hơn
+                </p>
               </div>
+              <button
+                class="button flex items-center gap-3 bg-[#801618] px-4 py-2 lg:px-5 lg:py-4 text-white hover:bg-black transition-colors text-xs lg:text-sm font-bold"
+              >
+                KHÁM PHÁ THÊM
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-
-        <!-- Slider indicators -->
         <div
-          id="slider-indicators"
-          class="hidden lg:grid grid-cols-4 gap-3 lg:gap-8 absolute bottom-1/10 z-1 left-1/2 -translate-x-1/2 container max-w-[1400px] mx-auto"
-        >
-          <p
-            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5 border-[#BF0006]"
-          >
-            Cam kết mang lại kết quả tối ưu
-          </p>
-          <p
-            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
-          >
-            Mang đến giải pháp tùy chỉnh
-          </p>
-          <p
-            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
-          >
-            Tạo dựng môi trường làm việc hiệu quả
-          </p>
-          <p
-            class="flex flex-col justify-end text-lg leading-6 text-white border-b-4 py-5"
-          >
-            Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn
-          </p>
-        </div>
-        <!-- Slider controls -->
-        <button
-          id="prev-button"
-          class="absolute top-1/2 z-10 left-5 lg:left-20 -translate-y-1/2 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
-          >
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-        </button>
-        <button
-          id="next-button"
-          class="absolute top-1/2 z-10 right-5 lg:right-20 -translate-y-1/2 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+          class="swiper-button-next lg:block hidden xl:right-1/10 right-[5%] text-2xl absolute top-1/2 z-10 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] transition-colors duration-300 ease-in-out"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -434,15 +388,40 @@
           >
             <path d="m9 18 6-6-6-6" />
           </svg>
-        </button>
+        </div>
+        <div
+          class="swiper-button-prev lg:block hidden xl:left-[7%] left-[1%] text-2xl absolute top-1/2 z-10 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] transition-colors duration-300 ease-in-out"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </div>
+        <div
+          class="swiper-pagination hidden xl:grid grid-cols-4 gap-7 !container px-18 text-lg leading-6"
+        ></div>
       </section>
       <!-- section 2 -->
       <section
-        class="contanier gap-12 flex xl:flex-row flex-col items-center -mt-16"
+        class="contanier gap-12 inline-flex lg:flex-row flex-col items-center xl:-mt-16 -mt-8"
       >
-        <img src="/images/image.png" class="object-contain w-full" alt="" />
+        <img
+          src="/images/image.png"
+          class="object-cover xl:w-full w-1/2 basis-1/2"
+          alt=""
+        />
         <div
-          class="flex flex-col lg:gap-10 gap-6 justify-center pl-4.5 pb-5 lg:mb-0 mb-10"
+          class="container mx-auto flex-1 flex flex-col lg:gap-10 gap-6 justify-start items-start justify-items-start pl-4.5 mt-5 xl:pb-5 xl:mb-10 py-5"
         >
           <img src="./images/Frame text.png" alt="" width="600px" />
           <p class="text-base lg:text-lg md:px-4 lg:px-0 leading-6 w-[72.5%]">
@@ -452,10 +431,10 @@
             và hiểu biết sâu sắc về thị trường địa phương giúp doanh nghiệp đáp
             ứng tốt các yêu cầu của các đối tác đa quốc gia.
           </p>
-          <div class="flex gap-6 pt-3 items-center">
+          <a href="/" class="flex gap-6 pt-3 items-center group">
             <span class="text-base font-bold leading-5.5"> VỀ CHÚNG TÔI</span>
             <button
-              class="border-2 border-[#801618] rounded-md rotate-45 p-1 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+              class="border-2 border-[#801618] rounded-md rotate-45 p-1 text-[#801618] group-hover:bg-[#801618] group-hover:text-white transition-colors duration-300 ease-in-out"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -472,553 +451,598 @@
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </button>
-          </div>
+          </a>
         </div>
       </section>
       <!-- section 3 -->
-      <section
-        class="w-full px-5 bg-[url(/images/bg-section-3.png)] py-20 bg-cover"
-      >
+      <section class="w-full px-5 bg-section-3 py-20 bg-cover">
         <h1
           class="text-5xl font-semibold leading-15.5 text-center lg:mt-[-5px] lg:mb-10"
         >
           Ứng dụng
         </h1>
-        <div class="flex lg:hidden overflow-x-auto gap-5 snap-x snap-mandatory">
-          <div
-            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center"
-          >
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-5.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                PIN LITHIUM
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
+        <div class="group/scroll">
+          <div class="w-full h-full relative mySwiper overflow-hidden">
+            <div class="swiper-wrapper py-10">
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
+                  <img
+                    src="/images/item-5.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
                   >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-6.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    PIN LITHIUM
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
+                >
+                  <img
+                    src="/images/item-3.png"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <h1
+                    class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
+                  >
+                    Ô TÔ
+                  </h1>
+                  <div
+                    class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
+                  >
+                    <p class="text-sm">
+                      A Green building achieves more with less. It consumes less
+                      energy and wastes fewer resources, embodying a greater
+                      responsibility towards the environment.
+                    </p>
+                    <button
+                      class="border-2 border-white group-hover:bg-white group-hover:text-[#801618] text-white p-3 rounded rotate-45 duration-500 transition-transform"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="-rotate-45"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-6.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                Ô TÔ
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
           <div
-            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center"
-          >
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-3.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                Ô TÔ
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-4.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                TẨY RỬA CÔNG NGHIỆP
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="relative flex-shrink-0 w-80 flex flex-col gap-5 z-10 snap-center lg:pt-10"
-          >
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-3.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                CÁP ĐIỆN
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden text-white flex flex-col items-center group text-center h-full"
-            >
-              <img
-                src="/images/item-2.png"
-                alt=""
-                class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-              />
-              <h1
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-1/2 group-hover:-translate-y-1/2 transition-all duration-300 ease-linear"
-              >
-                GĂNG TAY
-              </h1>
-              <div
-                class="absolute w-full top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-              >
-                <p class="text-sm">
-                  A Green building achieves more with less. It consumes less
-                  energy and wastes fewer resources, embodying a greater
-                  responsibility towards the environment.
-                </p>
-                <button
-                  class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="-rotate-45"
-                  >
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="overflow-x-auto gap-5 snap-x snap-mandatory hidden lg:grid lg:grid-cols-3 lg:overflow-visible lg:grid-rows-2"
-        >
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-5.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              PIN LITHIUM
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment. The philosophy of
-                providing a comfortable and healthy
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-1.5 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-6.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              Ô TÔ
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment.
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-3.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              PIN LITHIUM
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment.
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-4.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              PIN LITHIUM
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment.
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-1.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              PIN LITHIUM
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment.
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="relative col-span-1 overflow-hidden text-white flex flex-col items-center group text-center h-full"
-          >
-            <img
-              src="./images/item-2.png"
-              alt=""
-              class="w-full h-[400px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <h1
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 text-xl font-semibold z-10 group-hover:bottom-[65%] -translate-y-1/2 transition-all duration-300 ease-linear"
-            >
-              PIN LITHIUM
-            </h1>
-            <div
-              class="absolute w-full top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300 ease-linear z-10"
-            >
-              <p class="text-lg leading-6">
-                A Green building achieves more with less. It consumes less
-                energy and wastes fewer resources, embodying a greater
-                responsibility towards the environment.
-              </p>
-              <button
-                class="border-2 border-white hover:bg-white hover:text-[#801618] text-white p-3 rounded rotate-45"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="-rotate-45"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="py-10 w-full">
-          <div class="h-1 w-full bg-[#801618]"></div>
-        </div>
-        <div class="flex gap-3 items-center justify-center h-14">
-          <span class="text-base font-bold leading-5.5">XEM THÊM</span>
-          <button
-            class="border-2 border-[#801618] rounded-md rotate-45 p-1.5 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            class="slider__control inline-flex opacity-100 group-hover/scroll:opacity-0 transition-opacity duration-300 ease-in-out"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
+              class="swiper--application__btnPrev"
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
               fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="m9 18 6-6-6-6" />
+              <path d="M10 14L3 7.5L10 1" stroke-linecap="square" />
             </svg>
-          </button>
+
+            <div class="animate--pointer">
+              <svg
+                class="animate--pointer__pointer"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.9999 9.75V3.375C11.9999 2.87772 11.8023 2.40081 11.4507 2.04917C11.0991 1.69754 10.6221 1.5 10.1249 1.5C9.62759 1.5 9.15067 1.69754 8.79904 2.04917C8.44741 2.40081 8.24987 2.87772 8.24987 3.375V14.7437L6.19416 11.1831C6.07116 10.9697 5.9073 10.7825 5.71194 10.6324C5.51658 10.4823 5.29356 10.3722 5.05562 10.3083C4.81768 10.2445 4.56949 10.2281 4.32523 10.2602C4.08097 10.2923 3.84543 10.3723 3.63208 10.4955C3.41873 10.6186 3.23174 10.7827 3.0818 10.9781C2.93187 11.1736 2.82193 11.3967 2.75827 11.6347C2.6946 11.8727 2.67847 12.1209 2.71077 12.3652C2.74308 12.6094 2.82321 12.8449 2.94657 13.0581C5.99987 19.5 7.85773 21.75 11.9999 21.75C12.9848 21.75 13.9601 21.556 14.87 21.1791C15.7799 20.8022 16.6067 20.2497 17.3032 19.5533C17.9996 18.8569 18.5521 18.0301 18.929 17.1201C19.3059 16.2102 19.4999 15.2349 19.4999 14.25V10.5C19.4999 10.0027 19.3023 9.52581 18.9507 9.17417C18.5991 8.82254 18.1221 8.625 17.6249 8.625C17.1276 8.625 16.6507 8.82254 16.299 9.17417C15.9474 9.52581 15.7499 10.0027 15.7499 10.5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.75 10.5V9.375C15.75 8.87772 15.5525 8.40081 15.2008 8.04917C14.8492 7.69754 14.3723 7.5 13.875 7.5C13.3777 7.5 12.9008 7.69754 12.5492 8.04917C12.1975 8.40081 12 8.87772 12 9.375V9.75"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <svg
+              class="swiper--application__btnNext"
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+            </svg>
+          </div>
+          <a
+            href="/"
+            class="flex gap-3 items-center justify-center h-14 group w-full"
+          >
+            <span class="text-base font-bold leading-5.5">XEM THÊM</span>
+            <button
+              class="border-2 border-[#801618] rounded-md rotate-45 p-1.5 text-[#801618] group-hover:bg-[#801618] group-hover:text-white transition-colors duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </a>
         </div>
       </section>
       <!-- section 4 -->
@@ -1080,7 +1104,8 @@
                     6km - 15 phút
                   </div>
                   <div class="desc lg:text-[20px] leading-7">
-                    Quận kinh doanh trung tâm
+                    Quận kinh doanh <br />
+                    trung tâm
                   </div>
                 </div>
               </div>
@@ -1131,7 +1156,8 @@
                     35km - 35 phút
                   </div>
                   <div class="desc lg:text-[20px] leading-7">
-                    Sân bay Quốc tế Long Thành mới
+                    Sân bay Quốc tế <br class="xl:hidden block" />
+                    Long Thành mới
                   </div>
                 </div>
               </div>
@@ -1228,34 +1254,15 @@
         >
           Tin tức nổi bật
         </h1>
-        <div class="contanier relative">
-          <button
-            class="btn prev lg:left-[8%] left-0 bg-black/40 p-3 rotate-45"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          </button>
-          <div class="carousel max-w-[1400px] mx-auto">
-            <div class="carousel-track">
-              <div class="carousel-item flex flex-col gap-5">
+        <div class="container mx-auto max-w-[1400px] relative">
+          <div class="w-full relative overflow-hidden scrollSwiper px-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex flex-col gap-5">
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
-                  class="h-[52%] w-[96%]"
                 />
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 px-3">
                   <div class="flex items-center gap-3 text-slate-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1279,18 +1286,17 @@
                   </h1>
                 </div>
               </div>
-              <div class="carousel-item flex flex-col gap-5">
+              <div class="swiper-slide flex flex-col gap-5">
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
-                  class="h-[52%] w-[96%]"
                 />
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 px-3">
                   <div class="flex items-center gap-3 text-slate-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1302,25 +1308,24 @@
                       <path d="M12 6v6h4" />
                       <circle cx="12" cy="12" r="10" />
                     </svg>
-                    <div>20.06.2024</div>
+                    <p>20.06.2024</p>
                   </div>
                   <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
               </div>
-              <div class="carousel-item flex flex-col gap-5">
+              <div class="swiper-slide flex flex-col gap-5">
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
-                  class="h-[52%] w-[96%]"
                 />
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 px-3">
                   <div class="flex items-center gap-3 text-slate-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1332,25 +1337,24 @@
                       <path d="M12 6v6h4" />
                       <circle cx="12" cy="12" r="10" />
                     </svg>
-                    <div>20.06.2024</div>
+                    <p>20.06.2024</p>
                   </div>
                   <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
               </div>
-              <div class="carousel-item flex flex-col gap-5">
+              <div class="swiper-slide flex flex-col gap-5">
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
-                  class="h-[52%] w-[96%]"
                 />
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 px-3">
                   <div class="flex items-center gap-3 text-slate-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1362,25 +1366,24 @@
                       <path d="M12 6v6h4" />
                       <circle cx="12" cy="12" r="10" />
                     </svg>
-                    <div>20.06.2024</div>
+                    <p>20.06.2024</p>
                   </div>
                   <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
                   </h1>
                 </div>
               </div>
-              <div class="carousel-item flex flex-col gap-5">
+              <div class="swiper-slide flex flex-col gap-5">
                 <img
                   src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
                   alt=""
-                  class="h-[52%] w-[96%]"
                 />
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 px-3">
                   <div class="flex items-center gap-3 text-slate-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -1392,7 +1395,36 @@
                       <path d="M12 6v6h4" />
                       <circle cx="12" cy="12" r="10" />
                     </svg>
-                    <div>20.06.2024</div>
+                    <p>20.06.2024</p>
+                  </div>
+                  <h1 class="text-lg lg:text-[20px] font-bold leading-7">
+                    Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
+                  </h1>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col gap-5">
+                <img
+                  src="/images/67a9e7ff94e499cf7a1e7fb57274be1fc7da5816.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-3 px-3">
+                  <div class="flex items-center gap-3 text-slate-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-clock3-icon lucide-clock-3"
+                    >
+                      <path d="M12 6v6h4" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <p>20.06.2024</p>
                   </div>
                   <h1 class="text-lg lg:text-[20px] font-bold leading-7">
                     Những xu hướng sẽ định hình công nghiệp hóa chất thế giới
@@ -1401,31 +1433,51 @@
               </div>
             </div>
           </div>
-          <button
-            class="btn next lg:right-[9%] right-0 bg-black/40 rotate-45 p-3"
+          <div
+            class="swiper-button-next md:block hidden xl:-right-[5%] text-white right-[5%] text-2xl absolute top-1/2 z-20 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] transition-colors duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-chevron-right-icon lucide-chevron-right -rotate-45 text-white"
+              class="-rotate-45 lucide lucide-chevron-right-icon lucide-chevron-right"
             >
               <path d="m9 18 6-6-6-6" />
             </svg>
-          </button>
+          </div>
+          <div
+            class="swiper-button-prev md:flex hidden xl:-left-[7%] text-white left-[1%] text-2xl absolute top-1/2 z-10 bg-black/20 p-2 rounded-md rotate-45 hover:bg-[#801618] transition-colors duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="-rotate-45 lucide lucide-chevron-left-icon lucide-chevron-left"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </div>
         </div>
-        <div
-          class="flex gap-5 items-center justify-center h-14 -mt-11.5 mb-2.5"
+
+        <a
+          href="/"
+          class="flex gap-5 items-center justify-center h-14 mb-2.5 group"
         >
           <span class="text-base font-bold leading-5.5">XEM THÊM</span>
           <button
-            class="border-2 border-[#801618] rounded rotate-45 p-1 text-[#801618] hover:bg-[#801618] hover:text-white transition-colors duration-300 ease-in-out"
+            class="border-2 border-[#801618] rounded rotate-45 p-1 text-[#801618] group-hover:bg-[#801618] group-hover:text-white transition-colors duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1442,18 +1494,23 @@
               <path d="m9 18 6-6-6-6" />
             </svg>
           </button>
-        </div>
+        </a>
       </section>
       <!-- section 7 -->
       <section
-        class="w-[1600px] mx-auto grid grid-cols-12 lg:gap-10 md:gap-5 gap-2 bg-[url(/images/bg-section.png)] bg-cover lg:px-25 py-38.5 md:px-10 lg:mb-20 md:mb-10 mb-5"
+        class="lg:w-full xl:container my-20 mx-auto lg:pt-20 lg:pb-40 py-10 relative z-1 grid grid-cols-12 lg:gap-10 gap-0"
       >
+        <img
+          src="/images/bg-section.png"
+          class="absolute -z-10 w-full h-full"
+          alt=""
+        />
         <div
-          class="flex flex-col lg:gap-10 md:gap-5 gap-2 lg:col-span-5 md:col-span-6 col-span-full"
+          class="md:w-full w-fit flex flex-col lg:gap-10 md:gap-5 gap-2 lg:col-start-1 md:col-span-6 col-span-full lg:px-20 px-3"
         >
-          <div class="flex flex-col gap-4 text-white">
+          <div class="w-full flex flex-col gap-4 text-white">
             <h1
-              class="lg:text-5xl md:text-4xl text-3xl font-bold lg:leading-15 md:leading-13 leading-11 tracking-[-1px]"
+              class="lg:text-5xl md:text-4xl text-2xl font-bold lg:leading-15 md:leading-13 leading-11 tracking-[-1px]"
             >
               Hóa học cho một thế giới tốt đẹp hơn
             </h1>
@@ -1505,15 +1562,15 @@
         <img src="./images/phone.png" alt="" class="md:w-7 w-3" />
       </div>
     </div>
-    <footer class="bg-[url(/images/Frame-100.png)] py-10">
+    <footer class="bg-[url(/images/Frame-100.png)] py-10 px-3">
       <div
-        class="container max-w-[1400px] text-white mx-auto flex flex-col space-y-10"
+        class="container xl:max-w-[1400px] text-white mx-auto flex flex-col space-y-10 lg:px-0 px-3"
       >
         <div
-          class="flex md:flex-row flex-col justify-between items-center lg:gap-50 md:gap-20 gap-10 border-b-2 border-white/40 lg:pb-[52px]"
+          class="hidden lg:flex lg:flex-row flex-col justify-between lg:items-center xl:px-0 xl:py-10 p-3 2xl:gap-50 lg:gap-20 gap-10 border-b-2 border-white/40 lg:pb-[52px]"
         >
           <h1
-            class="lg:text-4xl md:text-3xl text-2xl font-bold !leading-10 tracking-[-2px] pt-[10px]"
+            class="lg:text-4xl md:text-3xl text-2xl font-bold leading-10 tracking-[-2px] pt-[10px]"
           >
             Cập nhật tin tức, sự kiện mới nhất từ Mercury Chemical!
           </h1>
@@ -1550,10 +1607,16 @@
             </form>
           </div>
         </div>
-        <div class="flex self-stretch justify-between md:gap-5 gap-2">
+        <div
+          class="flex xl:flex-row flex-col self-stretch justify-between md:gap-5 gap-2"
+        >
           <div class="flex flex-col justify-between basis-[23%]">
             <div class="flex flex-col gap-9">
-              <img src="./images/Frame.png" alt="" class="w-[70%] pt-3" />
+              <img
+                src="./images/Frame.png"
+                alt=""
+                class="lg:w-[70%] w-1/3 pt-3"
+              />
               <div class="flex gap-6">
                 <img src="./images/icon.png" alt="" />
                 <img src="./images/icon-ytb.png" alt="" />
@@ -1566,7 +1629,7 @@
               Cánh Cam.
             </p>
           </div>
-          <div class="flex flex-col justify-between basis-1/4 py-2.5 -ml-4">
+          <div class="flex flex-col justify-between basis-1/4 py-2.5 xl:-ml-4">
             <div class="flex flex-col gap-3 text-base">
               <h1 class="text-lg font-bold leading-7">
                 Công Ty TNHH Hóa Chất Mercury
@@ -1593,7 +1656,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 basis-[15%] -ml-10 py-3">
+          <div class="flex flex-col gap-5 basis-[15%] xl:-ml-10 py-3">
             <h1 class="text-lg font-bold leading-7 text-white">
               Về Mercury Chemical
             </h1>
@@ -1621,5 +1684,6 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/script.js"></script>
 </html>

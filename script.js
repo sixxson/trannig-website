@@ -8,77 +8,6 @@ window.addEventListener("scroll", function () {
     header.classList.add("header-bg");
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector("#default-carousel");
-  const items = document.querySelectorAll("#default-carousel > div");
-  const indicators = document.querySelectorAll("#slider-indicators p");
-  const prevBtn = document.getElementById("prev-button");
-  const nextBtn = document.getElementById("next-button");
-
-  let index = 0;
-  let intervalId;
-
-  // setup style cho track
-  track.style.display = "flex";
-  track.style.transition = "transform 0.5s ease";
-
-  // setup style cho item
-  items.forEach((item) => {
-    item.style.flex = "0 0 100%"; // mỗi slide chiếm 100%
-  });
-
-  function showSlide(i) {
-    index = i;
-    const offset = -index * 100;
-    track.style.transform = `translateX(${offset}%)`;
-
-    indicators.forEach((ind, idx) => {
-      if (idx === i) {
-        ind.classList.add("border-[#BF0006]");
-      } else {
-        ind.classList.remove("border-[#BF0006]");
-      }
-    });
-  }
-
-  function nextSlide() {
-    index = (index + 1) % items.length;
-    showSlide(index);
-  }
-
-  function prevSlide() {
-    index = (index - 1 + items.length) % items.length;
-    showSlide(index);
-  }
-
-  nextBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
-    nextSlide();
-    autoPlay();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
-    prevSlide();
-    autoPlay();
-  });
-
-  indicators.forEach((ind, i) => {
-    ind.addEventListener("click", () => {
-      clearInterval(intervalId);
-      showSlide(i);
-      autoPlay();
-    });
-  });
-
-  function autoPlay() {
-    intervalId = setInterval(nextSlide, 3000);
-  }
-
-  // khởi tạo
-  showSlide(index);
-  autoPlay();
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector(".carousel-track");
@@ -124,4 +53,106 @@ window.addEventListener("scroll", () => {
   } else {
     btn.classList.remove("show");
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const vision = new Swiper(".visionSwiper", {
+    spaceBetween: 30,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    rewind: true,
+    loopedSlides: 4,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        const texts = [
+          "Cam kết mang lại kết quả tối ưu",
+          "Mang đến giải pháp tùy chỉnh",
+          "Tạo dựng môi trường làm việc hiệu quả",
+          "Tuân thủ các tiêu chuẩn về môi trường, sức khỏe và an toàn",
+        ];
+        return (
+          '<p class="' + className + '">' + texts[index % texts.length] + "</p>"
+        );
+      },
+    },
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
+    speed: 800,
+    keyboard: { enabled: true },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+      hide: false,
+      draggable: true,
+    },
+    breakpoints: {
+      // tablet
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // desktop
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scroll = new Swiper(".scrollSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    rewind: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+      hide: false,
+      draggable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    speed: 800,
+    keyboard: { enabled: true },
+  });
+});
+
+// Toggle menu
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const menuIcon = menuBtn.querySelector(".menu_icon");
+  const mobileNav = document.getElementById("mobileNav");
+
+  menuBtn.addEventListener("click", () => {
+  menuIcon.classList.toggle("active");
+  mobileNav.classList.toggle("show");
+  });
 });
