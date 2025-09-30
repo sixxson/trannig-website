@@ -145,14 +145,70 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Toggle menu
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menuBtn");
   const menuIcon = menuBtn.querySelector(".menu_icon");
   const mobileNav = document.getElementById("mobileNav");
 
   menuBtn.addEventListener("click", () => {
-  menuIcon.classList.toggle("active");
-  mobileNav.classList.toggle("show");
+    menuIcon.classList.toggle("active");
+    mobileNav.classList.toggle("show");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchButtons = document.querySelectorAll(".search"); // lấy tất cả nút
+  const popupSearch = document.getElementById("popupSearch");
+  const closeBtn = popupSearch?.querySelector(".close");
+
+  if (!popupSearch) {
+    console.error("Không tìm thấy phần tử #popupSearch");
+    return;
+  }
+
+  function openPopup() {
+    popupSearch.classList.remove("hidden");
+    popupSearch.classList.add("flex");
+
+    void popupSearch.offsetWidth; // trick để transition chạy
+    popupSearch.classList.add("is-open");
+  }
+
+  function closePopup() {
+    popupSearch.classList.remove("is-open");
+
+    const onTransitionEnd = (e) => {
+      if (e.target === popupSearch) {
+        popupSearch.classList.add("hidden");
+        popupSearch.classList.remove("flex");
+        popupSearch.removeEventListener("transitionend", onTransitionEnd);
+      }
+    };
+    popupSearch.addEventListener("transitionend", onTransitionEnd);
+
+    setTimeout(() => {
+      popupSearch.classList.add("hidden");
+      popupSearch.classList.remove("flex");
+      popupSearch.classList.remove("is-open");
+    }, 300);
+  }
+
+  // gắn sự kiện cho tất cả nút .search
+  searchButtons.forEach((btn) => {
+    btn.addEventListener("click", openPopup);
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closePopup);
+  }
+
+  popupSearch.addEventListener("click", (e) => {
+    if (e.target === popupSearch) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closePopup();
   });
 });

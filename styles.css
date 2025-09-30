@@ -226,6 +226,58 @@
   }
 }
 
+.search{
+  cursor: pointer;
+}
+
+/* #popupSearch ban đầu có class hidden -> không hiện, khi mở sẽ add .flex + .is-open */
+#popupSearch {
+  position: fixed;
+  inset: 0;
+  display: none;            /* mặc định ẩn (Tailwind .hidden tương tự) */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+  z-index: 60;
+}
+
+/* khi add .flex thì display:flex và pointer-events cho phép click */
+#popupSearch.flex {
+  display: flex;
+  pointer-events: auto;
+}
+
+/* class bật trạng thái hiển thị để transition */
+#popupSearch.is-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* nội dung popup */
+#popupSearch .popup-inner {
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  min-width: 280px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+/* nút đóng */
+#popupSearch .close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .bg-section-3 {
   background: url("/images/Polygon\ 21.png") no-repeat;
   object-fit: cover;
