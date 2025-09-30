@@ -150,7 +150,7 @@
   left: 0;
   width: 100%;
   background: #801618;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   /* trạng thái mặc định: ẩn đi */
   opacity: 0;
@@ -226,7 +226,7 @@
   }
 }
 
-.search{
+.search {
   cursor: pointer;
 }
 
@@ -234,10 +234,10 @@
 #popupSearch {
   position: fixed;
   inset: 0;
-  display: none;            /* mặc định ẩn (Tailwind .hidden tương tự) */
+  display: none; /* mặc định ẩn (Tailwind .hidden tương tự) */
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 220ms ease, transform 220ms ease;
@@ -264,7 +264,7 @@
   border-radius: 8px;
   min-width: 280px;
   max-width: 90%;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -285,6 +285,9 @@
   clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
 }
 
+.bg-section-5 {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+}
 .con1 {
   max-width: 900px;
   margin: 40px auto;
